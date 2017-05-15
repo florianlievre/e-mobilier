@@ -1,13 +1,74 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+
+<html class="no-js" lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>E-Mobilier</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% block stylesheets %}
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico">
+        <!-- Bootstrap -->
+        <link href="{{ asset('css/vendor/bootstrap.min.css') }}" rel="stylesheet">
+        <!-- Fonts -->
+        <link href="{{ asset('css/fonts/et-lineicons/css/style.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/fonts/linea-font/css/linea-font.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/fonts/fontawesome/css/font-awesome.min.css') }}" rel="stylesheet">
+        <!-- Slider -->
+        <link href="{{ asset('css/vendor/slick.css') }}" rel="stylesheet">
+        <!-- Lightbox -->
+        <link href="{{ asset('css/vendor/magnific-popup.css') }}" rel="stylesheet">
+        <!-- Animate.css -->
+        {#<link rel="stylesheet" href="assets/styles/vendor/animate.css">#}
+        <link href="{{ asset('css/vendor/animate.css') }}" rel="stylesheet">
+
+
+        <!-- Definity CSS -->
+        {#<link rel="stylesheet" href="assets/styles/main.css">#}
+        <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+        {#<link rel="stylesheet" href="assets/styles/responsive.css">#}
+        <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
+
+    {% endblock %}
+
+<body id="page-top" data-spy="scroll" data-target=".navbar">
+{% block body %}{% endblock %}
+
+<!-- JS -->
+<link href="{{ asset('js/vendor/modernizr-2.8.3.min.js') }}" rel="stylesheet">
+
+<!-- ========== Scripts ========== -->
+
+<script src="{{ asset('js/vendor/jquery-2.1.4.min.js') }}"></script>
+<script src="{{ asset('js/vendor/google-fonts.js') }}"></script>
+<script src="{{ asset('js/vendor/jquery.easing.js') }}"></script>
+<script src="{{ asset('js/vendor/jquery.waypoints.min.js') }}"></script>
+<script src="{{ asset('js/vendor/bootstrap.min.js') }}"></script>
+<script src="{{ asset('js/vendor/bootstrap-hover-dropdown.min.js') }}"></script>
+<script src="{{ asset('js/vendor/smoothscroll.js') }}"></script>
+<script src="{{ asset('js/vendor/jquery.localScroll.min.js') }}"></script>
+<script src="{{ asset('js/vendor/jquery.scrollTo.min.js') }}"></script>
+<script src="{{ asset('js/vendor/jquery.stellar.min.js') }}"></script>
+<script src="{{ asset('js/vendor/jquery.parallax.js') }}"></script>
+<script src="{{ asset('js/vendor/slick.min.js') }}"></script>
+<script src="{{ asset('js/vendor/jquery.easypiechart.min.js') }}"></script>
+<script src="{{ asset('js/vendor/countup.min.js') }}"></script>
+<script src="{{ asset('js/vendor/isotope.min.js') }}"></script>
+<script src="{{ asset('js/vendor/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ asset('js/vendor/wow.min.js') }}"></script>
+<script src="{{ asset('js/vendor/jquery.ajaxchimp.js') }}"></script>
+<script src="{{ asset('js/vendor/animDots.js') }}"></script>
+
+<!-- Google Maps -->
+<script src="{{ asset('js/gmap.js') }}"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOcd7o0W0r846FC_GoHSK56xeAvP8fV4s"></script>
+
+<!-- Definity JS -->
+<script src="{{ asset('js/main.js') }}"></script>
+
+</body>
+</head>
 </html>
