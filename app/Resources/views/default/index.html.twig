@@ -85,7 +85,7 @@
             <div class="row section">
 
                 <header class="sec-heading">
-                    <h2>About Studio</h2>
+                    <h2>A Propos de Nous</h2>
                     <span class="subheading">Lorem ipsum dolor sit amet, consectetur</span>
                 </header>
 
@@ -102,10 +102,139 @@
             </div><!-- / .row -->
             <div class="row ws-m">
                 <div class="col-md-12 text-center">
-                    <a href="pages/about-1.html" class="btn-text">More about us</a>
+                    <a href="pages/about-1.html" class="btn-text">Plus d'informations</a>
                 </div>
             </div>
         </section><!-- / .container -->
+
+    {% endblock %}
+
+{% block annonce_section %}
+
+        <!-- ========== Section Annonce ========== -->
+
+        <section id="about" class="container">
+            <div class="row section">
+
+                <header class="sec-heading">
+                    <h2>Annonces</h2>
+                    <span class="subheading">Lorem ipsum dolor sit amet, consectetur</span>
+                </header>
+
+                <div class="col-md-4">
+                    <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        <footer><cite>by Henry Hill</cite></footer></blockquote>
+                </div>
+                <div class="col-md-4">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro dolor, hic tempore omnis! Et, quod! Repudiandae itaque necessitatibus, facilis optio debitis incidunt, veniam placeat fuga eos molestiae culpa rem eveniet.</p>
+                </div>
+                <div class="col-md-4">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro dolor, hic tempore omnis! Et, quod! Repudiandae itaque necessitatibus, facilis optio debitis incidunt, veniam placeat fuga eos molestiae culpa rem eveniet.</p>
+                </div>
+            </div><!-- / .row -->
+            <div class="row ws-m">
+                <div class="col-md-12 text-center">
+                    <a href="pages/about-1.html" class="btn-text">Plus d'informations</a>
+                </div>
+            </div>
+        </section><!-- / .container -->
+
+    {% endblock %}
+
+{% block Contact %}
+
+        <!-- ========== Section Contact ========== -->
+
+        <section id="contact" class="section contact-2">
+          
+          <header class="sec-heading">
+            <h2>Contactez-nous</h2>
+            <span class="subheading">Nous serons ravis de vous informer</span>
+          </header>
+
+          <!-- Map -->
+          <div id="map-canvas" class="gmap map-wide"></div>
+
+          <div class="footer-litle ws-m">
+            <div class="gray-bg">
+
+              <!-- Contact Info -->
+              <address>
+                <ul>
+                  <!-- Address -->
+                  <li>
+                    <span class="linea-basic-map adr-icon"></span>
+                    <div class="adr-group">
+                      <span class="adr-heading">Adresse</span>
+                      <span class="adr-info">36 Avenue Général Eisenhower, Lyon 05, France</span>
+                    </div>
+                  </li>
+
+                  <!-- Email -->
+                  <li>
+                    <span class="linea-basic-paperplane adr-icon"></span>
+                    <div class="adr-group">
+                      <span class="adr-heading">Email</span>
+                      <span class="adr-info">test@test.com</span>
+                    </div>
+                  </li>
+
+                  <!-- Phone -->
+                  <li>
+                    <span class="linea-basic-smartphone adr-icon"></span>
+                    <div class="adr-group">
+                      <span class="adr-heading">Téléphone</span>
+                      <span class="adr-info">+ 33 7 45 67 89 60</span>
+                    </div>
+                  </li>
+                </ul>
+              </address>            
+            </div><!-- / .gray-bg -->
+          </div>
+          
+          <div class="container">
+            
+            <!-- Contact Form -->
+            <div class="row">
+              <form action="../assets/contact-form/contact-form.php" method="POST" id="contact-form-1" class="form-ajax">
+                  <div class="col-md-offset-2 col-md-4 wow fadeInUp" data-wow-duration="1s">
+
+                    <!-- Name -->
+                    <div class="form-group">
+                      <input type="text" name="name" id="name-contact-1" class="form-control validate-locally" placeholder="Enter your name">
+                      <label for="name-contact-1">Nom</label>
+                      <span class="pull-right alert-error"></span>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                      <input type="email" name="email" id="email-contact-1" class="form-control validate-locally" placeholder="Enter your email">
+                      <label for="email-contact-1">Email</label>
+                      <span class="pull-right alert-error"></span>
+                    </div>
+
+                  </div>
+
+                  <div class="col-md-4 wow fadeInUp" data-wow-duration="1s">
+
+                    <!-- Message -->
+                    <div class="form-group">
+                      <textarea name="message" id="message-contact-1" class="form-control" rows="5" placeholder="Your Message"></textarea>
+                      <label for="message-contact-1">Message</label>
+                    </div>
+                    <div>
+                      <input type="submit" class="btn pull-right" value="Send Message">
+                    </div>
+
+                    <!-- Ajax Message -->
+                    <div class="ajax-message col-md-12 no-gap"></div>
+
+                  </div><!-- / .col-md-4 -->
+
+                </form>
+            </div><!-- / .row -->
+          </div><!-- / .container -->
+        </section><!-- / .contact-1 -->
 
     {% endblock %}
 
