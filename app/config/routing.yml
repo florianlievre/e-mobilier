@@ -1,7 +1,7 @@
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
-    
+crw_platform:
+    resource: "@CRWPlatformBundle/Resources/config/routing.yml"
+    prefix:   /
+
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 

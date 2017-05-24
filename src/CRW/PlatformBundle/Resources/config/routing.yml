@@ -1,0 +1,6 @@
+crw_platform_homepage:
+    path:     /
+    defaults: { _controller: CRWPlatformBundle:Default:index }
+
+crw_platform_contact: 
+    path:     /contact 
