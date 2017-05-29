@@ -38,8 +38,6 @@ if(isset($_POST['email'])) {
   
         !isset($_POST['email']) ||
  
-        // !isset($_POST['phone']) || // Décommenter pour rendre obligatoire
- 
         !isset($_POST['message'])) {
  
         died('Nous sommes désolé, mais il semblerais qu\'un problème ait survenue lors de l\'envoi de votre message.');       
@@ -51,8 +49,6 @@ if(isset($_POST['email'])) {
     $name = $_POST['name']; // Obligatoire
   
     $email_from = $_POST['email']; // Obligatoire
- 
-    $telephone = $_POST['phone']; // Non obligatoire
  
     $message = $_POST['message']; // Obligatoire
  
@@ -105,8 +101,6 @@ if(isset($_POST['email'])) {
     $email_message .= "Nom: ".clean_string($name)."\n";
   
     $email_message .= "Email: ".clean_string($email_from)."\n";
- 
-    $email_message .= "Téléphone: ".clean_string($telephone)."\n";
  
     $email_message .= "Message: ".clean_string($message)."\n";
  
