@@ -4,11 +4,11 @@ if(isset($_POST['email'])) {
  
      
  
-    // ADD YOUR EMAIL WHERE YOU WANT TO RECIEVE THE MESSAGES
+    // L'adresse mail dont on veut recevoir le message
  
     $email_to = "your.email@mail.com";
  
-    $email_subject = "Definity - Contact Form";
+    $email_subject = "E-Mobilier - Formulaire de contact";
  
      
  
@@ -16,11 +16,11 @@ if(isset($_POST['email'])) {
  
     function died($error) {
  
-        // your error code can go here
+        // Le code d'erreur
  
         echo '<div class="alert alert-danger alert-dismissible wow fadeInUp" role="alert">
           <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <strong>Something is wrong:</strong><br>';
+          <strong>Une erreur est intervenue:</strong><br>';
   
         echo $error."<br />";
  
@@ -32,29 +32,29 @@ if(isset($_POST['email'])) {
  
      
  
-    // validation expected data exists
+    // Validation de données attendus existantes
  
     if(!isset($_POST['name']) ||
   
         !isset($_POST['email']) ||
  
-        // !isset($_POST['phone']) || // un-commet for required
+        // !isset($_POST['phone']) || // Décommenter pour rendre obligatoire
  
         !isset($_POST['message'])) {
  
-        died('We are sorry, but there appears to be a problem with the form you submitted.');       
+        died('Nous sommes désolé, mais il semblerais qu\'un problème ait survenue lors de l\'envoi de votre message.');       
  
     }
  
      
  
-    $name = $_POST['name']; // required
+    $name = $_POST['name']; // Obligatoire
   
-    $email_from = $_POST['email']; // required
+    $email_from = $_POST['email']; // Obligatoire
  
-    $telephone = $_POST['phone']; // not required
+    $telephone = $_POST['phone']; // Non obligatoire
  
-    $message = $_POST['message']; // required
+    $message = $_POST['message']; // Obligatoire
  
      
  
@@ -64,7 +64,7 @@ if(isset($_POST['email'])) {
  
   if(!preg_match($email_exp,$email_from)) {
  
-    $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
+    $error_message .= 'L\'adresse mail que vous avez mentionné ne semble pas être valide.<br />';
  
   }
  
@@ -72,13 +72,13 @@ if(isset($_POST['email'])) {
  
   if(!preg_match($string_exp,$name)) {
  
-    $error_message .= 'The First Name you entered does not appear to be valid.<br />';
+    $error_message .= 'Le prénom que vous avez mentionné ne semble pas être valide.<br />';
  
   }
  
   if(strlen($message) < 2) {
  
-    $error_message .= 'The message you entered do not appear to be valid.<br />';
+    $error_message .= 'Le message que vous avez mentionné ne semble pas être valide.<br />';
  
   }
  
@@ -88,7 +88,7 @@ if(isset($_POST['email'])) {
  
   }
  
-    $email_message = "Form details below.\n\n";
+    $email_message = "Détails du formulaire ci-dessous.\n\n";
  
      
  
@@ -102,11 +102,11 @@ if(isset($_POST['email'])) {
  
      
  
-    $email_message .= "Name: ".clean_string($name)."\n";
+    $email_message .= "Nom: ".clean_string($name)."\n";
   
     $email_message .= "Email: ".clean_string($email_from)."\n";
  
-    $email_message .= "Telephone: ".clean_string($telephone)."\n";
+    $email_message .= "Téléphone: ".clean_string($telephone)."\n";
  
     $email_message .= "Message: ".clean_string($message)."\n";
  
@@ -114,11 +114,11 @@ if(isset($_POST['email'])) {
  
      
  
-// create email headers
+// Création d'header de l'email
  
-$headers = 'From: '.$email_from."\r\n".
+$headers = 'De: '.$email_from."\r\n".
  
-'Reply-To: '.$email_from."\r\n" .
+'A: '.$email_from."\r\n" .
  
 'X-Mailer: PHP/' . phpversion();
  
@@ -127,7 +127,7 @@ $headers = 'From: '.$email_from."\r\n".
 
  <div class="alert alert-success alert-dismissible wow fadeInUp" role="alert">
    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-   Your message has been sent.
+   Votre message a bien été envoyé.
  </div>
 
  <?php } ?>

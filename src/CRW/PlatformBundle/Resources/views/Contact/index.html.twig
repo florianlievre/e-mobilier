@@ -9,11 +9,11 @@
           <div class="form-wrapper"> 
             <div class="from-header"> 
               <h2>Entrer en contact</h2> 
-              <p>Vous avez un projet dont vous désirez que l'on considère, ou tout simplement nous dire bonjour? 
+              <p>Vous avez un projet dont vous désirez que l'on considère ou tout simplement nous dire bonjour? 
               Utilisez le formulaire ci-dessous pour nous décrire votre projet et nous contacter. Nous vous promettons de vous répondre dans les plus brefs délais.</p> 
             </div> 
  
-            <form action="../assets/contact-form/contact-form.php" method="POST" class="form-minimal form-ajax"> 
+            <form action="{{ asset('css/contact-form/contact-form.php') }}" method="POST" class="form-minimal form-ajax"> 
  
               <!-- Name --> 
               <div class="form-group"> 
@@ -55,22 +55,3 @@
   </section><!-- / .contact-3 --> 
  
 {% endblock %} 
- 
- 
-  <!-- ========== Social Links ========== --> 
-{% block social_links %} 
- 
-  <div class="dark-bg"> 
-    <div class="container footer-social-links"> 
-      <div class="row"> 
-         
-        <ul> 
-          <li><a href="#">Facebook</a></li> 
-          <li><a href="#">Twitter</a></li> 
-        </ul> 
- 
-      </div> 
-    </div><!-- / .container --> 
-  </div><!-- / .dark-bg --> 
-   
-{% endblock %}
