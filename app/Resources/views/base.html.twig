@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-
-<html class="no-js" lang="fr">
+<html class="no-js" lang="fr-FR">
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>E-Mobilier</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}E-Mobilier - La première plateforme d'annonces pour mendataires immobiliers{% endblock %}</title>
+        <meta name="description" content="{% block metaDescription %}Ce média innovant offre la possibilité aux entreprises et aux collectivités de partager, en un seul clic, toutes les informations clés concernant leur activité. Un outil pratique et ludique pour communiquer autrement.{% endblock %}">
+
 
         {% block stylesheets %}
             <!-- Favicon -->
@@ -34,12 +34,13 @@
 
         {% endblock %}
 
-        <body id="page-top" data-spy="scroll" data-target=".navbar">
+    </head>
+
+    <body id="page-top" data-spy="scroll" data-target=".navbar">
         
-            {% block body %}
+        {% block body %}{% endblock %}
 
-            {% endblock %}
-
+        {% block javascripts %}
             <!-- JS -->
             <link href="{{ asset('js/vendor/modernizr-2.8.3.min.js') }}" rel="stylesheet">
 
@@ -71,7 +72,6 @@
 
             <!-- Definity JS -->
             <script src="{{ asset('js/main.js') }}"></script>
-
+        {% endblock %}
     </body>
-    </head>
 </html>
