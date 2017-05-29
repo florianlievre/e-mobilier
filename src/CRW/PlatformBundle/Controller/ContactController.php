@@ -13,6 +13,6 @@ class ContactController extends Controller
      */
     public function indexAction(Request $request)
     {
-        return $this->render('public/contact.html.twig');
+        return $this->render('CRWPlatformBundle:Contact:index.html.twig');
     }
 }

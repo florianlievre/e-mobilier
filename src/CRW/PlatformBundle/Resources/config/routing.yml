@@ -4,3 +4,4 @@ crw_platform_homepage:
 
 crw_platform_contact: 
     path:     /contact 
+    defaults: { _controller: CRWPlatformBundle:Contact:index }
