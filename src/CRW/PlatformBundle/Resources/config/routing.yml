@@ -5,3 +5,11 @@ crw_platform_homepage:
 crw_platform_contact: 
     path:     /contact 
     defaults: { _controller: CRWPlatformBundle:Contact:index }
+
+crw_platform_faq: 
+    path:     /FAQ 
+    defaults: { _controller: CRWPlatformBundle:Faq:index }
+
+crw_platform_about: 
+    path:     /apropos 
+    defaults: { _controller: CRWPlatformBundle:About:index }
