@@ -15,4 +15,18 @@ class ContactController extends Controller
     {
         return $this->render('CRWPlatformBundle:Contact:index.html.twig');
     }
+
+    public function sendAction(){
+/*    	$message = new \Swift_Message('Hello Email')
+        ->setFrom('contact@e-mobilier.com')
+        ->setTo('recipient@example.com')
+        ->setBody(
+            $this->renderView(
+                // app/Resources/views/Emails/registration.html.twig
+                'Emails/registration.html.twig',
+                array('name' => $name)
+            ),
+            'text/html');
+	    $this->get('mailer')->send($message);*/
+    }
 }
