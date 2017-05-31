@@ -37,52 +37,14 @@
         <div class="col-md-12 col-lg-offset-2 col-lg-8"> 
           <div class="form-wrapper"> 
             <div class="from-header"> 
-              <h2>Entrer en contact</h2> 
-              <p>Vous avez un projet dont vous désirez que l'on considère ou tout simplement nous dire bonjour? 
-              Utilisez le formulaire ci-dessous pour nous décrire votre projet et nous contacter. Nous vous promettons de vous répondre dans les plus brefs délais.</p> 
-            </div> 
- 
-            <form action="{{ asset('css/contact-form/contact-form.php') }}" method="POST" class="form-minimal form-ajax"> 
- 
-              <!-- Name --> 
-              <div class="form-group"> 
-                <input type="text" name="name" id="name-contact-3" class="form-control validate-locally"> 
-                <label for="name-contact-3">Nom *</label> 
-                <span class="pull-right alert-error"></span> 
-              </div> 
- 
-              <!-- Email --> 
-              <div class="form-group"> 
-                <input type="email" name="email" id="email-contact-3" class="form-control validate-locally"> 
-                <label for="email-contact-3">Email *</label> 
-                <span class="pull-right alert-error"></span> 
-              </div> 
- 
-              <!-- Phone --> 
-              <div class="form-group ws-s"> 
-                <input type="tel" name="phone" id="phone-contact-3" class="form-control"> 
-                <label for="email-contact-3">Téléphone</label> 
-              </div> 
- 
-              <!-- Message --> 
-              <div class="form-group"> 
-                <p>Dites nous bonjour, ou parlez-nous de votre projet</p> 
-                <textarea class="form-control" name="message" id="message-contact-1" rows="5"></textarea> 
-                <label for="message-contact-1">Message *</label> 
-              </div> 
- 
-              <input type="submit" class="btn-text" value="Send Message"> 
- 
-              <!-- Ajax Message --> 
-              <div class="ajax-message"></div> 
- 
-            </form> 
+              <h2>Conditions Générales de Ventes</h2>
+
           </div> 
         </div> 
       </div> 
     </div><!-- / .container --> 
   </section><!-- / .contact-3 --> 
-    {% block footer %}
+{% block footer %}
 
     <!-- ========== Footer Widgets ========== -->
         
@@ -106,7 +68,7 @@
               <div class="col-md-3 col-sm-6 mb-sm-100">
                 <div class="widget about-widget">
                   <h5 class="header-widget">A Propos de nous</h5>
-                  <p>Nous sommes une plateforme d'annonces immobilières à destinations de mandataires immobiliers et fournissons des outils pour vous aider à trouver le bien de vos rêves. Les données sont fournies à titre indicatives et malgré notre vigilance peuvent contenir des erreurs. N'hésitez pas à nous les signaler dans les plus brefs délais.</p>
+                  <p>Nous sommes une plateforme d'annonces immobilières à destinations de mandataires immobiliers et fournissons des outils pour vous aider à trouver le bien de vos rêves.</p>
 
                   <ul class="social-links">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -174,6 +136,5 @@
 
         </footer><!-- / .footer-widgets -->
 
-    {% endblock %}
- 
+    {% endblock %} 
 {% endblock %} 

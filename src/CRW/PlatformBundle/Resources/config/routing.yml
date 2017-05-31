@@ -13,3 +13,11 @@ crw_platform_faq:
 crw_platform_about: 
     path:     /apropos 
     defaults: { _controller: CRWPlatformBundle:About:index }
+
+crw_platform_legal: 
+    path:     /mentions-legales 
+    defaults: { _controller: CRWPlatformBundle:Legal:index }
+
+crw_platform_cgv: 
+    path:     /CGV
+    defaults: { _controller: CRWPlatformBundle:Cgv:index }

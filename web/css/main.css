@@ -2306,6 +2306,14 @@ fieldset[disabled] .form-control:hover {
   color: #ccc;
 }
 
+.footer-widgets .about-widget a {
+  color: #777;
+}
+
+.footer-widgets .about-widget a:hover {
+  color: rgb(248, 248, 248);
+}
+
 .footer-widgets .twitter-widget ul li p a:hover {
   border-color: #ccc;
 }
@@ -4876,6 +4884,7 @@ fieldset[disabled] .form-control:hover {
 
 .team-4col .t-item .t-info .t-name {
   font-size: 14px;
+  letter-spacing: 2px;
 }
 
 .team-4col .t-item .t-info .t-role {
