@@ -2954,6 +2954,7 @@ fieldset[disabled] .form-control:hover {
 .navbar-inverse .navbar-nav li a {
   color: #777;
 }
+
 .navbar-trans .navbar-nav li a {
   color: white;
 }
@@ -3028,11 +3029,16 @@ fieldset[disabled] .form-control:hover {
 /* ---- Navbar Utility ---- */
 .navbar-trans {
   border-bottom: none;
-  background: transparent;
   -webkit-transition: background 0.3s;
           transition: background 0.3s;
 }
 
+.is-home{
+   border-bottom: none;
+   background: transparent;
+   -webkit-transition: background 0.3s;
+          transition: background 0.3s;
+}
 
 .navbar-trans .navbar-logo {
   content: url(../images/logo-light.png);
