@@ -1,4 +1,6 @@
 services:
-#    crw_platform.example:
-#        class: CRW\PlatformBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    crw_platform.services.cookies_banner:
+        class: CRW\PlatformBundle\Services\CookiesBanner
+        tags:
+            - { name: kernel.event_listener, event: kernel.response, method: onKernelResponse, priority: -10 }
+        arguments: ["@templating"]

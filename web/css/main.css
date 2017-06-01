@@ -8501,6 +8501,21 @@ form .input-error-2:focus {
   height: 100vh;
 }
 
+#cookies-banner {
+    display: none;
+    width: 100%;
+    padding: 8px 15px;
+    font-size: 1.3rem;
+    background: #fafafa;
+    color: #313436;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    font-weight: 700;
+    border-bottom: 1px solid #dbdbdc;
+}
+
 .landing-hero .hero-wrapper .hero-content {
   display: table-cell;
   width: 100%;
