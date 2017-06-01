@@ -8514,6 +8514,7 @@ form .input-error-2:focus {
     bottom: 0;
     font-weight: 700;
     border-bottom: 1px solid #dbdbdc;
+    z-index: 99999;
 }
 
 .landing-hero .hero-wrapper .hero-content {
