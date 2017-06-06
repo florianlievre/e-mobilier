@@ -27,7 +27,7 @@ class AnnonceController extends Controller
 
         $annonces = $user->getAnnonces();
 
-        return $this->render('@App/annonce/index.html.twig', array(
+        return $this->render('@CRWPlatformBundle/Resources/views/annonce/index.html.twig', array(
             'annonces' => $annonces,
         ));
     }
@@ -45,7 +45,7 @@ class AnnonceController extends Controller
 
         $annonce = new Annonce();
         $annonce->setAuteur($user);
-        $form = $this->createForm('CRW\PlatformBundle\Form\AnnonceType', $annonce);
+        $form = $this->createForm('CRWPlatformBundle\Form\AnnonceType', $annonce);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -56,7 +56,7 @@ class AnnonceController extends Controller
             return $this->redirectToRoute('annonce_show', array('id' => $annonce->getId()));
         }
 
-        return $this->render('@App/annonce/new.html.twig', array(
+        return $this->render('@CRWPlatformBundle/Resources/views/annonce/new.html.twig', array(
             'annonce' => $annonce,
             'form' => $form->createView(),
         ));
@@ -72,7 +72,7 @@ class AnnonceController extends Controller
     {
         $deleteForm = $this->createDeleteForm($annonce);
 
-        return $this->render('@App/annonce/show.html.twig', array(
+        return $this->render('@CRWPlatformBundle/Resources/views/annonce/show.html.twig', array(
             'annonce' => $annonce,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -87,7 +87,7 @@ class AnnonceController extends Controller
     public function editAction(Request $request, Annonce $annonce)
     {
         $deleteForm = $this->createDeleteForm($annonce);
-        $editForm = $this->createForm('CRW\PlatformBundle\Form\AnnonceType', $annonce);
+        $editForm = $this->createForm('CRWPlatformBundle\Form\AnnonceType', $annonce);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
@@ -96,7 +96,7 @@ class AnnonceController extends Controller
             return $this->redirectToRoute('annonce_edit', array('id' => $annonce->getId()));
         }
 
-        return $this->render('@App/annonce/edit.html.twig', array(
+        return $this->render('@CRWPlatformBundle/Resources/views/annonce/edit.html.twig', array(
             'annonce' => $annonce,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
