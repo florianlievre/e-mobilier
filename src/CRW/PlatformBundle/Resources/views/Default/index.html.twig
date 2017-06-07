@@ -33,7 +33,7 @@
                     <div class="hero-content-wrapper">
                         <div class="hero-content">
 
-                            <img src="{{ asset('img/logo.svg') }}" alt="Presentation"  style="width: 170px;">
+                            <img src="{{ asset('img/logo.svg') }}" alt="Presentation"  style="width: 190px;">
                             <h1 class="hero-lead">E-Mobilier</h1>
                             <h4 class="h-alt hero-secondary">Agence de regroupement d'annonces immobilières</h4>
                             <a href="#annonce" class="btn btn-light">Voir les annonces</a>
@@ -54,36 +54,89 @@
 
     {% endblock %}
 
-    {% block presentation %}
+    {% block objectifs %}
 
-        <!-- ========== About - Section ========== -->
-      <div class="gray-bg">
-        <section id="about" class="container">
+        <!-- ========== About - Objectifs ========== -->
+        <section id="services" class="container ft-cards">
             <div class="row section">
 
                 <header class="sec-heading">
-                    <h2>A Propos de Nous</h2>
-                    <span class="subheading">Lorem ipsum dolor sit amet, consectetur</span>
+                    <h2>Nos objectifs</h2>
                 </header>
 
-                <div class="col-md-4">
-                    <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                        <footer><cite>by Henry Hill</cite></footer></blockquote>
+                <!-- Item 1 -->
+                <div class="col-lg-4 col-md-6 mb-sm-50">
+                    <div class="ft-item wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
+                        <span class="linea-arrows-circle-check"></span>
+                        <h4>Ergonomie</h4>
+                        <p>Un design simple avec  des fonctionnalités accessibles et aisées d’utilisation pour une mise en contact facilitée.</p>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro dolor, hic tempore omnis! Et, quod! Repudiandae itaque necessitatibus, facilis optio debitis incidunt, veniam placeat fuga eos molestiae culpa rem eveniet.</p>
+
+                <!-- Item 2 -->
+                <div class="col-lg-4 col-md-6 mb-sm-50">
+                    <div class="ft-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                        <span class="linea-basic-webpage-img-txt"></span>
+                        <h4>Facilité</h4>
+                        <p>Quelques étapes simples vous suffisent à créer votre compte, à poster votre annonce et à entrer en contact.</p>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro dolor, hic tempore omnis! Et, quod! Repudiandae itaque necessitatibus, facilis optio debitis incidunt, veniam placeat fuga eos molestiae culpa rem eveniet.</p>
+
+                <!-- Item 3 -->
+                <div class="col-lg-4 col-md-6 mb-sm-50">
+                    <div class="ft-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.6s; animation-name: fadeInUp;">
+                        <span class="linea-basic-mail"></span>
+                        <h4>Praticité</h4>
+                        <p>Entre en contact avec les professionnels  de votre choix grâce à notre messagerie interne. Fini les échanges interminables par mail ! </p>
+                    </div>
                 </div>
+
             </div><!-- / .row -->
-            <div class="row ws-m">
-                <div class="col-md-12 text-center">
-                    <a href="/apropos" class="btn" >Plus d'informations</a>
-                </div>
-            </div>
-        </section><!-- / .container -->
-      </div>
+        </section>
+
+    {% endblock %}
+
+    {% block presentation %}
+
+        <!-- ========== About - Section ========== -->
+        <div class="gray-bg">
+            <section id="services" class="container ft-cards">
+                <div class="row section">
+
+                    <header class="sec-heading">
+                        <h2>Venez en toute simplicité</h2>
+                    </header>
+
+                    <!-- Item 1 -->
+                    <div class="col-lg-4 col-md-6 mb-sm-50">
+                        <div class="ft-item wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
+                            <span class="linea-arrows-circle-check"></span>
+                            <h4>Inscription</h4>
+                            <p>Créez votre profil e-mmobilier aisément, en quelques étapes, pour contacter et être contacté par nos mandataires.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="col-lg-4 col-md-6 mb-sm-50">
+                        <div class="ft-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                            <span class="linea-basic-webpage-img-txt"></span>
+                            <h4>Postage d'annonces</h4>
+                            <p>Créez votre annonce en quelques étapes avec notre formulaire simplifié.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="col-lg-4 col-md-6 mb-sm-50">
+                        <div class="ft-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.6s; animation-name: fadeInUp;">
+                            <span class="linea-basic-mail"></span>
+                            <h4>Prise de contact</h4>
+                            <p>Contactez les mandataires avec les profils les plus adaptés à votre transaction. Ou laissez les prendre contact avec vous, c’est à votre convenance.</p>
+                        </div>
+                    </div>
+
+                </div><!-- / .row -->
+            </section>
+        </div>
 
     {% endblock %}
 
@@ -253,12 +306,6 @@
                   <div class="t-info">
                     <h4 class="t-name">Benedict BIANCHINI</h4>
                     <span class="t-role">Chef de projet</span>
-                    <ul class="social-links">
-                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                      <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                    </ul>
                   </div>
 
                 </div><!-- / .t-item -->
@@ -284,10 +331,6 @@
                   <div class="t-info">
                     <h4 class="t-name">Mehdi CHOUANIA</h4>
                     <span class="t-role">Web Developpeur</span>
-                    <ul class="social-links">
-                      <li><a href="https://www.linkedin.com/in/mehdi-chouania-24840ba6/"><i class="fa fa-linkedin"></i></a></li>
-                      <li><a href="http://chouania-mehdi.fr/"><i class="fa fa-dribbble"></i></a></li>
-                    </ul>
                   </div>
 
                 </div><!-- / .t-item -->
@@ -313,12 +356,6 @@
                   <div class="t-info">
                     <h4 class="t-name">Florian LIEVRE</h4>
                     <span class="t-role">Web Developpeur</span>
-                    <ul class="social-links">
-                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                      <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                    </ul>
                   </div>
 
                 </div><!-- / .t-item -->
@@ -344,12 +381,6 @@
                   <div class="t-info">
                     <h4 class="t-name">Sifa SIR</h4>
                     <span class="t-role">Web Designer</span>
-                    <ul class="social-links">
-                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                      <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                    </ul>
                   </div>
 
                 </div><!-- / .t-item -->
