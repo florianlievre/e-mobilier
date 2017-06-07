@@ -85,7 +85,7 @@ class ContactController extends Controller
 
         $message = \Swift_Message::newInstance('Formulaire de contact')
            ->setFrom(array($mailerUser => "Message de ".$data["name"]))
-           ->setTo(array($mailerUser => $data["email"]))
+           ->setTo(array($data["email"] => $data["email"]))
            ->setBody("Nom :".$data["name"].
                      "<br>Adresse Mail :".$data["email"].
                      "<br>Telephone :".$data["telephone"].
