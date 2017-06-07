@@ -1,0 +1,8 @@
+crw_platform_contact_index: 
+    path:     / 
+    defaults: { _controller: CRWPlatformBundle:Contact:index }
+
+
+crw_platform_contact_envoyer: 
+    path:     /envoyer 
+    defaults: { _controller: CRWPlatformBundle:Contact:envoyer }

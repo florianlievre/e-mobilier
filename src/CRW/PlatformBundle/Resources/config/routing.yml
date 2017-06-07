@@ -2,9 +2,9 @@ crw_platform_homepage:
     path:     /
     defaults: { _controller: CRWPlatformBundle:Default:index }
 
-crw_platform_contact: 
-    path:     /contact 
-    defaults: { _controller: CRWPlatformBundle:Contact:index }
+crw_platform_contact:
+    resource: "@CRWPlatformBundle/Resources/config/routing_contact.yml"
+    prefix: /contact
 
 crw_platform_faq: 
     path:     /FAQ 

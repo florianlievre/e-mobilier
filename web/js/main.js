@@ -842,6 +842,28 @@ $( '.form-ajax' ).submit(function(e) {
 	);
 });
 
+//	AJAX call BIS
+$( '.form-ajax-bis' ).submit(function(e) {
+	e.preventDefault();
+	var self = $(this),
+		action = $(this).attr( 'action' );
+
+	// The AJAX requrest
+	$.post(
+		action,
+		self.serialize(),
+		function( data ) {
+			if( data.status ) {
+				alert('it works');
+			}
+			else {
+				$( '.ajax-form' ).html( data.form );
+			}
+			
+		}
+	);
+});
+
 //	Validates the fileds
 function validateField ( field ) {
 	var errorText = "",

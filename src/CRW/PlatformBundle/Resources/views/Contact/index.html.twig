@@ -3,32 +3,7 @@
 {% block body %} 
  
   {% block nav %}
-  <!-- ========== Navigation ========== -->
 
-    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse navbar-trans  navbar-fw" role="navigation">
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <!-- Logo -->
-            <a class="navbar-brand" href="/"><img src="{{ asset('img/logo-light.png') }}"></a>
-        </div>
-
-        <!-- Navbar Links -->
-        <div id="navbar" class="navbar-collapse collapse page-scroll navbar-right">
-            <ul class="nav navbar-nav">
-                <li><a href="/">Accueil<span class="sr-only"></span></a></li>
-                <li><a href="/annonce">Annonces<span class="sr-only"></span></a></li>
-                <li><a href="/apropos">A Propos<span class="sr-only"></span></a></li>
-                <li><a href="/FAQ">FAQ<span class="sr-only"></span></a></li>
-                <li><a href="/contact">Contact<span class="sr-only"></span></a></li>
-                <li><a href="/login">Connexion<span class="sr-only"></span></a></li>
-            </ul><!-- / .nav .navbar-nav -->
-        </div><!--/.navbar-collapse -->
-    </nav><!-- / .navbar -->
   {% endblock %}
   
   <section id="contact" class="contact-3"> 
@@ -42,41 +17,9 @@
               Utilisez le formulaire ci-dessous pour nous décrire votre projet et nous contacter. Nous vous promettons de vous répondre dans les plus brefs délais.</p> 
             </div> 
  
-            <form action="{{ asset('css/contact-form/contact-form.php') }}" method="POST" class="form-minimal form-ajax"> 
- 
-              <!-- Name --> 
-              <div class="form-group"> 
-                <input type="text" name="name" id="name-contact-3" class="form-control validate-locally"> 
-                <label for="name-contact-3">Nom *</label> 
-                <span class="pull-right alert-error"></span> 
-              </div> 
- 
-              <!-- Email --> 
-              <div class="form-group"> 
-                <input type="email" name="email" id="email-contact-3" class="form-control validate-locally"> 
-                <label for="email-contact-3">Email *</label> 
-                <span class="pull-right alert-error"></span> 
-              </div> 
- 
-              <!-- Phone --> 
-              <div class="form-group ws-s"> 
-                <input type="tel" name="phone" id="phone-contact-3" class="form-control"> 
-                <label for="email-contact-3">Téléphone</label> 
-              </div> 
- 
-              <!-- Message --> 
-              <div class="form-group"> 
-                <p>Dites nous bonjour, ou parlez-nous de votre projet</p> 
-                <textarea class="form-control" name="message" id="message-contact-1" rows="5"></textarea> 
-                <label for="message-contact-1">Message *</label> 
-              </div> 
- 
-              <input type="submit" class="btn-ghost" value="Envoyer"> 
- 
-              <!-- Ajax Message --> 
-              <div class="ajax-message"></div> 
- 
-            </form> 
+           <div class="ajax-form"> 
+            {% include 'CRWPlatformBundle:Contact:formulaire.html.twig' with {'form_contact': form_contact} %}
+           </div>
           </div> 
         </div> 
       </div> 
