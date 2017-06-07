@@ -18,18 +18,19 @@
 
   <!-- Phone --> 
   <div class="form-group ws-s"> 
-    {{ form_widget(form_contact.telephone, { 'attr': {'class': 'form-control'} }) }}
+    {{ form_widget(form_contact.telephone, { 'attr': {'class': 'form-control validate-locally'} }) }}
     {{ form_label(form_contact.telephone) }}
     {{ form_errors(form_contact.telephone) }}
   </div> 
 
   <!-- Message --> 
   <div class="form-group"> 
-    {{ form_widget(form_contact.message, { 'attr': {'class': 'form-control'} }) }}
-    {{ form_label(form_contact.telephone) }}
+    {{ form_widget(form_contact.message, { 'attr': {'class': 'form-control validate-locally'} }) }}
+    {{ form_label(form_contact.message) }}
     {{ form_errors(form_contact.message) }}
   </div> 
 
-  {{ form_widget(form_contact.submit, { 'attr': {'class': 'btn-ghost'} }) }}
-
+  <div style="text-align: center">
+  {{ form_widget(form_contact.submit, { 'attr': {'class': 'btn-ghost' } }) }}
+  </div>
 {{ form_end(form_contact) }}

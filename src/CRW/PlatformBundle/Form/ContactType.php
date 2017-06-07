@@ -40,8 +40,8 @@ class ContactType extends AbstractType
                     new NotBlank(array("message" => "Veuillez mentionner votre message")),
                 )
             ))
-            ->add('submit', SubmitType::class, array('attr' => array('placeholder' => 'Envoyer')
-            ))
+            ->add('submit', SubmitType::class, array('label' => 'Envoyer')
+            )
         ;
     }
 
