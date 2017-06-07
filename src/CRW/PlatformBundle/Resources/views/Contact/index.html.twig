@@ -4,6 +4,8 @@
  
   {% block nav %}
 
+    {{ parent() }}
+    
   {% endblock %}
   
   <section id="contact" class="contact-3"> 
@@ -20,6 +22,7 @@
            <div class="ajax-form"> 
             {% include 'CRWPlatformBundle:Contact:formulaire.html.twig' with {'form_contact': form_contact} %}
            </div>
+           
           </div> 
         </div> 
       </div> 

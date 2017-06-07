@@ -5,7 +5,6 @@ namespace CRW\PlatformBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class ContactController extends Controller
@@ -55,8 +54,7 @@ class ContactController extends Controller
                 if($this->sendEmail($form->getData())){
 
                     // Everything OK, redirect to wherever you want ! :
-                    
-                    //return $this->redirectToRoute('redirect_to_somewhere_now');
+                    // return $this->redirectToRoute('redirect_to_somewhere_now');
                 }
                 else{
                     // An error ocurred, handle
@@ -78,22 +76,15 @@ class ContactController extends Controller
         $myappContactMail = 'mycontactmail@mymail.com';
         $myappContactPassword = 'yourmailpassword';
         
-        // In this case we'll use the ZOHO mail services.
-        // If your service is another, then read the following article to know which smpt code to use and which port
-        // http://ourcodeworld.com/articles/read/14/swiftmailer-send-mails-from-php-easily-and-effortlessly
-        
-        $transport = \Swift_SmtpTransport::newInstance('smtp.zoho.com', 465,'ssl')
-            ->setUsername($myappContactMail)
-            ->setPassword($myappContactPassword);
+        $transport = \Swift_SmtpTransport::newInstance('smtp.gmail.com', 465,'ssl')
+            ->setUsername('mymail@gmail.com')
+            ->setPassword('mypassword');
 
         $mailer = \Swift_Mailer::newInstance($transport);
-        
-        $message = \Swift_Message::newInstance("Our Code World Contact Form ". $data["subject"])
-        ->setFrom(array($myappContactMail => "Message by ".$data["name"]))
-        ->setTo(array(
-            $myappContactMail => $myappContactMail
-        ))
-        ->setBody($data["message"]."<br>ContactMail :".$data["email"]);
+        $message = \Swift_Message::newInstance('Our Code World Newsletter')
+           ->setFrom(array('mymail@gmail.com' => 'Our Code World'))
+           ->setTo(array("mail@email.com" => "mail@mail.com"))
+           ->setBody("<h1>Welcome</h1>", 'text/html');
         
         return $mailer->send($message);
     }
