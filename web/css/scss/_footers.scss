@@ -130,6 +130,14 @@
 				}
 			}
 		}
+
+		a {
+			color: #777;
+
+			&:hover {
+				color: rgb(248, 248, 248);
+			}
+		}
 	} // .about-widget
 
 	.gallery-widget {
@@ -501,3 +509,19 @@
 		}
 	}
 } // .footer-litle
+
+#cookies-banner {
+	display: none;
+	width: 100%;
+	padding: 8px 15px;
+	font-size: 1.3rem;
+	background: #fafafa;
+	color: #313436;
+	text-align: center;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	font-weight: 700;
+	border-bottom: 1px solid #dbdbdc;
+	z-index: 99999;
+}
