@@ -19,25 +19,25 @@ class ContactType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name', TextType::class, array('attr' => array('placeholder' => 'Your name'),
+            ->add('name', TextType::class, array('attr' => array('placeholder' => 'Votre nom'),
                 'constraints' => array(
-                    new NotBlank(array("message" => "Please provide your name")),
+                    new NotBlank(array("message" => "Veuillez mentionner votre nom")),
                 )
             ))
-            ->add('email', EmailType::class, array('attr' => array('placeholder' => 'Your email address'),
+            ->add('email', EmailType::class, array('attr' => array('placeholder' => 'Votre email'),
                 'constraints' => array(
-                    new NotBlank(array("message" => "Please provide a valid email")),
+                    new NotBlank(array("message" => "Veuillez mentionner votre email")),
                     new Email(array("message" => "Your email doesn't seems to be valid")),
                 )
             ))
-            ->add('telephone', NumberType::class, array('attr' => array('placeholder' => 'Subject'),
+            ->add('telephone', NumberType::class, array('attr' => array('placeholder' => 'Votre numéro de téléphone'),
                 'constraints' => array(
-                    new NotBlank(array("message" => "Please give a Subject")),
+                    new NotBlank(array("message" => "Veuillez mentionner votre numéro de telephone")),
                 )
             ))
-            ->add('message', TextareaType::class, array('attr' => array('placeholder' => 'Your message here'),
+            ->add('message', TextareaType::class, array('attr' => array('placeholder' => 'Votre message'),
                 'constraints' => array(
-                    new NotBlank(array("message" => "Please provide a message here")),
+                    new NotBlank(array("message" => "Veuillez mentionner votre message")),
                 )
             ))
             ->add('submit', SubmitType::class, array('attr' => array('placeholder' => 'Envoyer')

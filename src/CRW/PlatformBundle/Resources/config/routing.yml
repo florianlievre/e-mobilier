@@ -6,6 +6,10 @@ crw_platform_contact:
     resource: "@CRWPlatformBundle/Resources/config/routing_contact.yml"
     prefix: /contact
 
+crw_platform_annonce: 
+    path:     /annonce
+    defaults: { _controller: CRWPlatformBundle:Annonce:index }
+
 crw_platform_faq: 
     path:     /FAQ 
     defaults: { _controller: CRWPlatformBundle:Faq:index }
@@ -21,3 +25,7 @@ crw_platform_legal:
 crw_platform_cgv: 
     path:     /CGV
     defaults: { _controller: CRWPlatformBundle:Cgv:index }
+
+#crw_platform_login: 
+#    path:     /login
+#    defaults: { _controller: CRWPlatformBundle:Login:index }

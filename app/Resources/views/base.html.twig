@@ -58,11 +58,11 @@
             <div id="navbar" class="navbar-collapse collapse page-scroll navbar-right">
                 <ul class="nav navbar-nav">
                     <li><a href="{{ path('crw_platform_homepage') }}">Accueil<span class="sr-only"></span></a></li>
-                    <li><a href="{{ path('crw_platform_contact') }}">Annonces<span class="sr-only"></span></a></li>
+                    <li><a href="{{ path('crw_platform_annonce') }}">Annonces<span class="sr-only"></span></a></li>
                     <li><a href="{{ path('crw_platform_about') }}">A Propos<span class="sr-only"></span></a></li>
                     <li><a href="{{ path('crw_platform_faq') }}">FAQ<span class="sr-only"></span></a></li>
                     <li><a href="{{ path('crw_platform_contact_index') }}">Contact<span class="sr-only"></span></a></li>
-                    <li><a href="{{ path('crw_platform_contact') }}">Connexion<span class="sr-only"></span></a></li>
+                    <li><a href="{{ path('crw_platform_contact_index') }}">Connexion<span class="sr-only"></span></a></li>
                 </ul><!-- / .nav .navbar-nav -->
             </div><!--/.navbar-collapse -->
         </nav><!-- / .navbar -->
@@ -83,11 +83,12 @@
               <div class="col-md-3 col-sm-6 mb-sm-100">
                 <div class="widget about-widget">
                   <h5 class="header-widget">Navigation</h5>
-                    <a href="/">Accueil</a><br>
-                    <a href="/annonce">Annonces</a><br>
-                    <a href="/apropos">A Propos</a><br>
-                    <a href="/FAQ">FAQ</a><br>
-                    <a href="/contact">Contact</a>
+                    <a href="{{ path('crw_platform_homepage') }}">Accueil</a><br>
+                    <a href="{{ path('crw_platform_annonce') }}">Annonces</a><br>
+                    <a href="{{ path('crw_platform_about') }}">A Propos</a><br>
+                    <a href="{{ path('crw_platform_faq') }}">FAQ</a><br>
+                    <a href="{{ path('crw_platform_contact_index') }}">Contact</a><br>
+                    <a href="{{ path('crw_platform_contact_index') }}">Connexion</a>
                 </div><!-- / .widget -->
               </div><!-- / .col-md-3 -->
 
@@ -134,8 +135,8 @@
                 <div class="widget about-widget">
                   <h5 class="header-widget">Mentions légales & CGV</h5>
                   
-                    <a href="/mentions-legales">Mentions Légales</a><br>
-                    <a href="/CGV">Conditions Générales de Vente</a><br>
+                    <a href="{{ path('crw_platform_legal') }}">Mentions Légales</a><br>
+                    <a href="{{ path('crw_platform_cgv') }}">Conditions Générales de Vente</a><br>
 
                 </div><!-- / .widget -->
               </div><!-- / .col-md-3 -->
