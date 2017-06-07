@@ -7,8 +7,10 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
@@ -28,7 +30,7 @@ class ContactType extends AbstractType
                     new Email(array("message" => "Your email doesn't seems to be valid")),
                 )
             ))
-            ->add('telephone', IntegerType::class, array('attr' => array('placeholder' => 'Subject'),
+            ->add('telephone', NumberType::class, array('attr' => array('placeholder' => 'Subject'),
                 'constraints' => array(
                     new NotBlank(array("message" => "Please give a Subject")),
                 )
@@ -37,6 +39,8 @@ class ContactType extends AbstractType
                 'constraints' => array(
                     new NotBlank(array("message" => "Please provide a message here")),
                 )
+            ))
+            ->add('submit', SubmitType::class, array('attr' => array('placeholder' => 'Envoyer')
             ))
         ;
     }

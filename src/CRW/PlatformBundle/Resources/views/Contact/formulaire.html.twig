@@ -1,0 +1,36 @@
+{{ form_start(form_contact, { 'attr': {'class': 'form-minimal form-ajax-bis'} }) }}
+
+  <!-- Name --> 
+  <div class="form-group"> 
+    {{ form_widget(form_contact.name, { 'attr': {'class': 'form-control validate-locally'} }) }}
+    {{ form_label(form_contact.name) }}
+    {{ form_errors(form_contact.name) }}
+    <span class="pull-right alert-error"></span> 
+  </div> 
+
+  <!-- Email --> 
+  <div class="form-group"> 
+    {{ form_widget(form_contact.email, { 'attr': {'class': 'form-control validate-locally'} }) }}
+    {{ form_label(form_contact.email) }}
+    {{ form_errors(form_contact.email) }}
+    <span class="pull-right alert-error"></span> 
+  </div> 
+
+  <!-- Phone --> 
+  <div class="form-group ws-s"> 
+    {{ form_widget(form_contact.telephone, { 'attr': {'class': 'form-control'} }) }}
+    {{ form_label(form_contact.telephone) }}
+    {{ form_errors(form_contact.telephone) }}
+  </div> 
+
+  <!-- Message --> 
+  <div class="form-group"> 
+    {{ form_widget(form_contact.message, { 'attr': {'class': 'form-control'} }) }}
+    {{ form_label(form_contact.telephone) }}
+    {{ form_errors(form_contact.message) }}
+    <p>Dites nous bonjour, ou parlez-nous de votre projet</p> 
+  </div> 
+
+  {{ form_widget(form_contact.submit, { 'attr': {'class': 'btn-ghost'} }) }}
+
+{{ form_end(form_contact) }}
