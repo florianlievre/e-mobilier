@@ -43,22 +43,22 @@ class ContactController extends Controller
 
         if ($request->isMethod('POST')) {
 
-            // Refill the fields in case the form is not valid.
+            // Remplis les champs au cas ou le formulaire n'est pas valide
             $form->handleRequest($request);
 
             if($form->isValid()){
 
                 $data["status"] = true;
 
-                // Send mail
+                // Envoi de mail
                 if($this->sendEmail($form->getData())){
 
-                    // Everything OK, redirect to wherever you want ! :
+                    // Tout est OK, redirection possible:
                     // return $this->redirectToRoute('redirect_to_somewhere_now');
                 }
                 else{
-                    // An error ocurred, handle
-                    var_dump("Errooooor :(");
+                    // Une erreur s'est produite
+                    var_dump("ERREUR :(");
                 }
             }
             else {
@@ -73,18 +73,18 @@ class ContactController extends Controller
 
     public function sendEmail($data){
 
-        $myappContactMail = 'mycontactmail@mymail.com';
-        $myappContactPassword = 'yourmailpassword';
+        $myappContactMail = 'shinr700@gmail.com';
+        $myappContactPassword = 'Playstation4';
         
         $transport = \Swift_SmtpTransport::newInstance('smtp.gmail.com', 465,'ssl')
-            ->setUsername('mymail@gmail.com')
-            ->setPassword('mypassword');
+            ->setUsername('shinr700@gmail.com')
+            ->setPassword('Playstation4');
 
         $mailer = \Swift_Mailer::newInstance($transport);
-        $message = \Swift_Message::newInstance('Our Code World Newsletter')
-           ->setFrom(array('mymail@gmail.com' => 'Our Code World'))
-           ->setTo(array("mail@email.com" => "mail@mail.com"))
-           ->setBody("<h1>Welcome</h1>", 'text/html');
+        $message = \Swift_Message::newInstance('Formulaire de contact')
+           ->setFrom(array('' => ''))
+           ->setTo(array("" => ""))
+           ->setBody("", 'text/html');
         
         return $mailer->send($message);
     }
