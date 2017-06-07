@@ -72,19 +72,24 @@ class ContactController extends Controller
     }
 
     public function sendEmail($data){
+        
 
-        $myappContactMail = 'shinr700@gmail.com';
-        $myappContactPassword = 'Playstation4';
+        $mailerUser = $this->container->getParameter('mailer_user');
+        $mailerPwd = $this->container->getParameter('mailer_password');
         
         $transport = \Swift_SmtpTransport::newInstance('smtp.gmail.com', 465,'ssl')
-            ->setUsername('shinr700@gmail.com')
-            ->setPassword('Playstation4');
+            ->setUsername($mailerUser)
+            ->setPassword($mailerPwd);
 
         $mailer = \Swift_Mailer::newInstance($transport);
+
         $message = \Swift_Message::newInstance('Formulaire de contact')
-           ->setFrom(array('' => ''))
-           ->setTo(array("" => ""))
-           ->setBody("", 'text/html');
+           ->setFrom(array($mailerUser => "Message de ".$data["name"]))
+           ->setTo(array($mailerUser => $data["email"]))
+           ->setBody("Nom :".$data["name"].
+                     "<br>Adresse Mail :".$data["email"].
+                     "<br>Telephone :".$data["telephone"].
+                     "<br>Message :".$data["message"]);
         
         return $mailer->send($message);
     }
