@@ -16,8 +16,10 @@
 		margin-top: 6px;
 
 		.navbar-brand {
-			padding: 15px 0;
 			margin-left: 0;
+			img {
+				width:75px;
+			}
 		}
 	}
 
@@ -31,7 +33,7 @@
 				font-size: $nav-links-font-size;
 				font-weight: $nav-links-font-weight;
 				letter-spacing: $nav-links-letter-spacing;
-				color: $nav-links-color;
+				color: $white;
 				transition: color .5s;
 
 				&:focus {
@@ -415,7 +417,7 @@
 		li {
 
 			a {
-				color: $nav-inverse-links-color;
+				color: white;
 
 				&:hover {
 					color: $nav-inverse-links-color-hover;
@@ -533,6 +535,12 @@
 	border-bottom: none;
 	background: rgba(0,0,0, 0);
 	transition: background .3s;
+
+	.is-home{
+		border-bottom: none;
+		background: transparent;
+		transition: background 0.3s;
+	}
 
 	.navbar-logo {
 		content: url(../images/logo-light.png);
