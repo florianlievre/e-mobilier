@@ -45,7 +45,7 @@ class AnnonceController extends Controller
 
         $annonce = new Annonce();
         $annonce->setAuteur($user);
-        $form = $this->createForm('CRWPlatformBundle\Form\AnnonceType', $annonce);
+        $form = $this->createForm('CRW\PlatformBundle\Form\AnnonceType', $annonce);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
