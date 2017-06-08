@@ -3,43 +3,67 @@
 {% set active = 0 %}
 
 {% block body %}
-    <h1>Annonces list {{ app.user.username }}</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Titre</th>
-                <th>Datecreation</th>
-                <th>Description</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for annonce in annonces %}
-            <tr>
-                <td><a href="{{ path('annonce_show', { 'id': annonce.id }) }}">{{ annonce.id }}</a></td>
-                <td>{{ annonce.titre }}</td>
-                <td>{% if annonce.dateCreation %}{{ annonce.dateCreation|date('Y-m-d') }}{% endif %}</td>
-                <td>{{ annonce.description }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('annonce_show', { 'id': annonce.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('annonce_edit', { 'id': annonce.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('annonce_new') }}">Create a new annonce</a>
-        </li>
-    </ul>
+
+
+                <section id="blog" class="section container blog-columns blog-preview">
+                    <a href="{{ path('annonce_new') }}" class="btn btn-small">Ajouter une annonce</a><br><br>
+                    <div class="row">
+
+                        {% for annonce in annonces %}
+
+
+
+                                <!-- Blog Post 1 -->
+                                <div class="col-lg-4 col-md-6 mb-sm-50 ws-s">
+                                    <div class="blog-post">
+
+                                        <!-- Image -->
+                                        <a href="#" class="post-img"><img src="http://placehold.it/990x715" alt="Blog Post 1"></a>
+
+                                        <div class="bp-content">
+
+                                            <!-- Meta data -->
+                                            <div class="post-meta">
+                                                <a href="#" class="post-date">
+                                                    <i class="fa fa-calendar-o"></i>
+                                                    <span>{% if annonce.dateCreation %}{{ annonce.dateCreation|date('Y-m-d') }}{% endif %}</span>
+                                                </a>
+                                                <a href="#" class="post-comments">
+                                                    <i class="fa fa-comments-o"></i>
+                                                    <span>12</span>
+                                                </a>
+                                            </div><!-- / .meta -->
+
+                                            <!-- Post Title -->
+                                            <a href="blog-post.html" class="post-title"><h4>{{ annonce.titre }}</h4></a>
+
+                                            <!-- Blurb -->
+                                            <p>{{ annonce.description|slice(0,75) }}</p>
+
+                                            <!-- Link -->
+
+                                            <center><a href="{{ path('annonce_show', { 'id': annonce.id }) }}" class="btn btn-small">Afficher</a></br></br>
+                                                <a href="{{ path('annonce_edit', { 'id': annonce.id }) }}" class="btn btn-small">Modifier</a></center>
+
+                                        </div><!-- / .bp-content -->
+
+                                    </div><!-- / .blog-post -->
+                                </div><!-- / .col-lg-4 -->
+
+
+                        {% endfor %}
+
+                </section>
+
+
+
+
+
+
+
+
+
+
 {% endblock %}

@@ -2,17 +2,106 @@
 
 {% set active = 0 %}
 
+
 {% block body %}
-    <h1>Annonce creation</h1>
 
+
+<header class="page-title pt-small">
+    <div class="container">
+        <div class="row">
+            <h1 class="col-sm-6">Formulaire d'annonce</h1>
+            <ol class="col-sm-6 text-right breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Elements</a></li>
+                <li class="active">Buttons</li>
+            </ol>
+        </div>
+    </div>
+</header>
+
+
+
+<!-- ========== Forms ========== -->
+
+<section class="test">
     {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
-    {{ form_end(form) }}
+        <div class="row ws-m ">
 
-    <ul>
-        <li>
-            <a href="{{ path('annonce_index') }}">Back to the list</a>
-        </li>
-    </ul>
+
+            <div class="col-md-offset-2 col-md-4">
+                <br>
+
+                <!-- Name -->
+                <div class="form-group">
+                    {{ form_label(form.titre) }}
+                    {{ form_widget(form.titre, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.typedebien) }}
+                    {{ form_widget(form.typedebien, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.prix) }}
+                    {{ form_widget(form.prix, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.surface) }}
+                    {{ form_widget(form.surface, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+                <!-- Numbers -->
+                <div class="form-group">
+                    {{ form_label(form.nbdepiece) }}
+                    {{ form_widget(form.nbdepiece, { 'attr': {'class': 'form-control' } }) }}
+                </div>
+            </div><!-- / .col-md-4 -->
+
+            <div class="col-md-4">
+                <br>
+                <!-- Textarea -->
+                <div class="form-group">
+
+                    <div class="form-group">
+                        {{ form_label(form.description) }}
+                        {{ form_widget(form.description, { 'attr': {'class': 'form-control' } }) }}
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.dpe) }}
+                    {{ form_widget(form.dpe, { 'attr': {'class': 'form-control'} }) }}
+
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.ges) }}
+                    {{ form_widget(form.ges, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.image) }}
+                    {{ form_widget(form.image, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+                <br><br><br><br>
+                {{ form_widget(form.envoyer, { 'attr': {'class': 'btn'} }) }}
+            </div><!-- / .col-md-4 -->
+
+        </div><!-- / .row -->
+
+    {{ form_end(form) }}
+</section><!-- / .container -->
+
+
+
+    {{ form_widget(form.envoyer) }}
+
+
+<ul>
+    <li>
+        <a href="{{ path('annonce_index') }}">Back to the list</a>
+    </li>
+</ul>
+
 {% endblock %}
+
+

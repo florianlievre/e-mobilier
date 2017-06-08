@@ -87,7 +87,7 @@ class AnnonceController extends Controller
     public function editAction(Request $request, Annonce $annonce)
     {
         $deleteForm = $this->createDeleteForm($annonce);
-        $editForm = $this->createForm('CRWPlatformBundle\Form\AnnonceType', $annonce);
+        $editForm = $this->createForm('CRW\PlatformBundle\Form\AnnonceType', $annonce);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
