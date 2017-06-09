@@ -32,14 +32,14 @@ class Annonce
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="dateCreation", type="date")
+     * @ORM\Column(name="dateCreation", type="date", nullable=true)
      */
     private $dateCreation;
 
     /**
-     * @var string
+     * @var text
      *
-     * @ORM\Column(name="description", type="string", length=255)
+     * @ORM\Column(name="description", type="text")
      */
     private $description;
 
@@ -77,17 +77,17 @@ class Annonce
 
 
     /**
-     * @var boolean
+     * @var string
      *
-     * @ORM\Column(name="dpe", type="boolean", length=255)
+     * @ORM\Column(name="dpe", type="string", length=255)
      */
     private $dpe;
 
 
     /**
-     * @var boolean
+     * @var string
      *
-     * @ORM\Column(name="ges", type="boolean", length=255)
+     * @ORM\Column(name="ges", type="string", length=255)
      */
     private $ges;
 
@@ -98,7 +98,28 @@ class Annonce
      */
     private $image;
 
+    /**
+     * @var text
+     *
+     * @ORM\Column(name="adresse", type="text")
+     */
+    private $adresse;
 
+    /**
+     * @var text
+     *
+     * @ORM\Column(name="arrondissement", type="text")
+     */
+    private $arrondissement;
+
+
+
+    /**
+     *
+     *
+     * @ORM\ManyToOne(targetEntity="CRW\PlatformBundle\Entity\Utilisateur", inversedBy="annonces")
+     */
+    private $auteur;
 
 
     /**
@@ -209,5 +230,173 @@ class Annonce
     public function getAuteur()
     {
         return $this->auteur;
+    }
+
+    /**
+     * Set typedebien
+     *
+     * @param boolean $typedebien
+     *
+     * @return Annonce
+     */
+    public function setTypedebien($typedebien)
+    {
+        $this->typedebien = $typedebien;
+
+        return $this;
+    }
+
+    /**
+     * Get typedebien
+     *
+     * @return boolean
+     */
+    public function getTypedebien()
+    {
+        return $this->typedebien;
+    }
+
+    /**
+     * Set prix
+     *
+     * @param integer $prix
+     *
+     * @return Annonce
+     */
+    public function setPrix($prix)
+    {
+        $this->prix = $prix;
+
+        return $this;
+    }
+
+    /**
+     * Get prix
+     *
+     * @return integer
+     */
+    public function getPrix()
+    {
+        return $this->prix;
+    }
+
+    /**
+     * Set surface
+     *
+     * @param integer $surface
+     *
+     * @return Annonce
+     */
+    public function setSurface($surface)
+    {
+        $this->surface = $surface;
+
+        return $this;
+    }
+
+    /**
+     * Get surface
+     *
+     * @return integer
+     */
+    public function getSurface()
+    {
+        return $this->surface;
+    }
+
+    /**
+     * Set nbdepiece
+     *
+     * @param integer $nbdepiece
+     *
+     * @return Annonce
+     */
+    public function setNbdepiece($nbdepiece)
+    {
+        $this->nbdepiece = $nbdepiece;
+
+        return $this;
+    }
+
+    /**
+     * Get nbdepiece
+     *
+     * @return integer
+     */
+    public function getNbdepiece()
+    {
+        return $this->nbdepiece;
+    }
+
+    /**
+     * Set dpe
+     *
+     * @param boolean $dpe
+     *
+     * @return Annonce
+     */
+    public function setDpe($dpe)
+    {
+        $this->dpe = $dpe;
+
+        return $this;
+    }
+
+    /**
+     * Get dpe
+     *
+     * @return boolean
+     */
+    public function getDpe()
+    {
+        return $this->dpe;
+    }
+
+    /**
+     * Set ges
+     *
+     * @param boolean $ges
+     *
+     * @return Annonce
+     */
+    public function setGes($ges)
+    {
+        $this->ges = $ges;
+
+        return $this;
+    }
+
+    /**
+     * Get ges
+     *
+     * @return boolean
+     */
+    public function getGes()
+    {
+        return $this->ges;
+    }
+
+    /**
+     * Set image
+     *
+     * @param string $image
+     *
+     * @return Annonce
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
     }
 }
