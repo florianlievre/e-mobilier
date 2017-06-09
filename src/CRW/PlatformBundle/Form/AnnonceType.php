@@ -26,7 +26,24 @@ class AnnonceType extends AbstractType
                 'label' => "Titre de l'annonce",
             ))
 
+            ->add('adresse', TextType::class, array(
+                'label' => "Adresse",
+            ))
 
+            ->add('arrondissement', ChoiceType::class, array(
+                'choices' => array(
+                    '1er' => '1er',
+                    '2ème' => '2ème',
+                    '3ème' => '3ème',
+                    '4ème' => '4ème',
+                    '5ème' => '5ème',
+                    '6ème' => '6ème',
+                    '7ème' => '7ème',
+                    '8ème' => '8ème',
+                    '9ème' => '9ème',
+
+                )
+            ))
 
             ->add('description', TextareaType::class, array(
                 'attr' => array(

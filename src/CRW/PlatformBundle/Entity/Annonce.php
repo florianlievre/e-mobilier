@@ -98,6 +98,21 @@ class Annonce
      */
     private $image;
 
+    /**
+     * @var text
+     *
+     * @ORM\Column(name="adresse", type="text")
+     */
+    private $adresse;
+
+    /**
+     * @var text
+     *
+     * @ORM\Column(name="arrondissement", type="text")
+     */
+    private $arrondissement;
+
+
 
     /**
      *
@@ -383,5 +398,53 @@ class Annonce
     public function getImage()
     {
         return $this->image;
+    }
+
+    /**
+     * Set adresse
+     *
+     * @param string $adresse
+     *
+     * @return Annonce
+     */
+    public function setAdresse($adresse)
+    {
+        $this->adresse = $adresse;
+
+        return $this;
+    }
+
+    /**
+     * Get adresse
+     *
+     * @return string
+     */
+    public function getAdresse()
+    {
+        return $this->adresse;
+    }
+
+    /**
+     * Set arrondissement
+     *
+     * @param string $arrondissement
+     *
+     * @return Annonce
+     */
+    public function setArrondissement($arrondissement)
+    {
+        $this->arrondissement = $arrondissement;
+
+        return $this;
+    }
+
+    /**
+     * Get arrondissement
+     *
+     * @return string
+     */
+    public function getArrondissement()
+    {
+        return $this->arrondissement;
     }
 }
