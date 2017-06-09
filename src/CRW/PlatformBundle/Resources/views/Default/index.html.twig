@@ -1,5 +1,12 @@
 {% extends 'base.html.twig' %}
 
+{% set active = 1 %}
+
+{% block nav %}
+  {{ parent() }}
+
+{% endblock %}
+
 {% block body %}
 
     <!--[if lt IE 8]>
@@ -12,12 +19,6 @@
     <div class="preloader">
         <img src="{{ asset('img/loader.svg') }}" alt="Loading...">
     </div>
-
-
-    {% block nav %}
-      {{ parent() }}
-
-    {% endblock %}
 
     {% block img_cover %}
 
@@ -393,8 +394,6 @@
 
     {% endblock %}
 
-    
-
     {% block Contact %}
 
         <!-- ========== Section Contact ========== -->
@@ -444,49 +443,6 @@
               </address>            
             </div><!-- / .gray-bg -->
           </div>
-          
-          <div class="container">
-            
-            <!-- Contact Form -->
-            <div class="row">
-              <form action="{{ asset('css/contact-form/contact-form-accueil.php') }}" method="POST" id="contact-form-1" class="form-ajax">
-                  <div class="col-md-offset-2 col-md-4 wow fadeInUp" data-wow-duration="1s">
-
-                    <!-- Name -->
-                    <div class="form-group">
-                      <input type="text" name="name" id="name-contact-1" class="form-control validate-locally" placeholder="Votre nom">
-                      <label for="name-contact-1">Nom</label>
-                      <span class="pull-right alert-error"></span>
-                    </div>
-
-                    <!-- Email -->
-                    <div class="form-group">
-                      <input type="email" name="email" id="email-contact-1" class="form-control validate-locally" placeholder="Votre email">
-                      <label for="email-contact-1">Email</label>
-                      <span class="pull-right alert-error"></span>
-                    </div>
-
-                  </div>
-
-                  <div class="col-md-4 wow fadeInUp" data-wow-duration="1s">
-
-                    <!-- Message -->
-                    <div class="form-group">
-                      <textarea name="message" id="message-contact-1" class="form-control" rows="5" placeholder="Votre message"></textarea>
-                      <label for="message-contact-1">Message</label>
-                    </div>
-                    <div>
-                      <input type="submit" class="btn pull-right" value="Send Message">
-                    </div>
-
-                    <!-- Ajax Message -->
-                    <div class="ajax-message col-md-12 no-gap"></div>
-
-                  </div><!-- / .col-md-4 -->
-
-                </form>
-            </div><!-- / .row -->
-          </div><!-- / .container -->  
         </section><!-- / .contact-1 -->
     {% endblock %}
 

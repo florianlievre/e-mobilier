@@ -1,12 +1,16 @@
 {% extends 'base.html.twig' %}
 
+{% set active = 0 %}
+
+{% block nav %}
+  {{ parent() }}
+
+  
+{% endblock %}
+
 {% block body %} 
  
-    {% block nav %}
-
-      {{ parent() }}
-      
-    {% endblock %}
+    
     <!-- ========== About - Section ========== -->
 
     <section id="about" class="container">

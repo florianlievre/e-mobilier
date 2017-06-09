@@ -11,6 +11,12 @@ web_profiler:
     toolbar: true
     intercept_redirects: false
 
+
+swiftmailer:
+    transport:  gmail
+    username:   "%mailer_user%"
+    password:   "%mailer_password%"
+
 monolog:
     handlers:
         main:
@@ -30,5 +36,4 @@ monolog:
         #    type:   chromephp
         #    level:  info
 
-#swiftmailer:
-#    delivery_addresses: ['me@example.com']
+
