@@ -2162,12 +2162,10 @@ blockquote, .wrapper-404 .content-wrapper .info-wrapper .info-404, .bg-maintenan
     background: #1a1b35; }
     .btn:visited:hover, .btn-ghost:visited:hover, .btn-ghost-light:visited:hover, .navbar .navbar-nav .dropdown .cart-dropdown .cart-btns .btn-ghost-light:visited:hover, .btn-text:visited:hover, .btn-text-light:visited:hover, .btn-light:visited:hover, .navbar .navbar-nav .dropdown .cart-dropdown .cart-btns .btn-ghost:visited:hover, .navbar .navbar-nav .dropdown .cart-dropdown .cart-btns .btn-light:visited:hover {
       color: #1a1b35;
-      background: white;
-      border: #1a1b35; }
+      background: white; }
   .btn:hover, .btn-ghost:hover, .btn-ghost-light:hover, .navbar .navbar-nav .dropdown .cart-dropdown .cart-btns .btn-ghost-light:hover, .btn-text:hover, .btn-text-light:hover, .btn-light:hover, .navbar .navbar-nav .dropdown .cart-dropdown .cart-btns .btn-ghost:hover, .navbar .navbar-nav .dropdown .cart-dropdown .cart-btns .btn-light:hover {
     color: #1a1b35;
-    background: white;
-    border: #1a1b35; }
+    background: white; }
   .btn:focus, .btn-ghost:focus, .btn-ghost-light:focus, .navbar .navbar-nav .dropdown .cart-dropdown .cart-btns .btn-ghost-light:focus, .btn-text:focus, .btn-text-light:focus, .btn-light:focus, .navbar .navbar-nav .dropdown .cart-dropdown .cart-btns .btn-ghost:focus, .navbar .navbar-nav .dropdown .cart-dropdown .cart-btns .btn-light:focus {
     color: #ececec;
     outline: none; }
@@ -4842,7 +4840,9 @@ fieldset[disabled] .form-control {
   .team-3col .t-item .t-image, .team-4col .t-item .t-image, .freelancer-about .t-item .t-image {
     position: relative;
     height: 375px;
-    overflow: hidden; }
+    overflow: hidden;
+    padding: 50px;
+    background-color: #cccccc; }
     .team-3col .t-item .t-image .t-description, .team-4col .t-item .t-image .t-description, .freelancer-about .t-item .t-image .t-description {
       display: block;
       position: absolute;
