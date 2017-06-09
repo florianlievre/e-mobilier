@@ -2146,8 +2146,8 @@ blockquote, .wrapper-404 .content-wrapper .info-wrapper .info-404, .bg-maintenan
   position: relative;
   display: inline-block;
   padding: 8px 38px;
-  background: #111;
-  color: #ececec;
+  background: #1a1b35;
+  color: white;
   font-family: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   text-transform: uppercase;
   letter-spacing: 2.5px;
@@ -2158,14 +2158,14 @@ blockquote, .wrapper-404 .content-wrapper .info-wrapper .info-404, .bg-maintenan
   -o-transition: all 0.5s;
   transition: all 0.5s; }
   .btn:visited, .btn-ghost:visited, .btn-ghost-light:visited, .navbar .navbar-nav .dropdown .cart-dropdown .cart-btns .btn-ghost-light:visited, .btn-text:visited, .btn-text-light:visited, .btn-light:visited, .navbar .navbar-nav .dropdown .cart-dropdown .cart-btns .btn-ghost:visited, .navbar .navbar-nav .dropdown .cart-dropdown .cart-btns .btn-light:visited {
-    color: #ececec;
-    background: #111; }
+    color: white;
+    background: #1a1b35; }
     .btn:visited:hover, .btn-ghost:visited:hover, .btn-ghost-light:visited:hover, .navbar .navbar-nav .dropdown .cart-dropdown .cart-btns .btn-ghost-light:visited:hover, .btn-text:visited:hover, .btn-text-light:visited:hover, .btn-light:visited:hover, .navbar .navbar-nav .dropdown .cart-dropdown .cart-btns .btn-ghost:visited:hover, .navbar .navbar-nav .dropdown .cart-dropdown .cart-btns .btn-light:visited:hover {
-      color: #ececec;
-      background: #3f3f3f; }
+      color: #1a1b35;
+      background: white; }
   .btn:hover, .btn-ghost:hover, .btn-ghost-light:hover, .navbar .navbar-nav .dropdown .cart-dropdown .cart-btns .btn-ghost-light:hover, .btn-text:hover, .btn-text-light:hover, .btn-light:hover, .navbar .navbar-nav .dropdown .cart-dropdown .cart-btns .btn-ghost:hover, .navbar .navbar-nav .dropdown .cart-dropdown .cart-btns .btn-light:hover {
-    color: #ececec;
-    background: #3f3f3f; }
+    color: #1a1b35;
+    background: white; }
   .btn:focus, .btn-ghost:focus, .btn-ghost-light:focus, .navbar .navbar-nav .dropdown .cart-dropdown .cart-btns .btn-ghost-light:focus, .btn-text:focus, .btn-text-light:focus, .btn-light:focus, .navbar .navbar-nav .dropdown .cart-dropdown .cart-btns .btn-ghost:focus, .navbar .navbar-nav .dropdown .cart-dropdown .cart-btns .btn-light:focus {
     color: #ececec;
     outline: none; }
@@ -2246,16 +2246,16 @@ input[class="btn-ghost"]:after {
 /* ---- 2.6 Light Buttons ---- */
 .btn-light {
   color: #111;
-  background: #ececec; }
+  background: white; }
   .btn-light:visited {
     color: #111;
-    background: #ececec; }
+    background: white; }
     .btn-light:visited:hover {
-      color: #111;
-      background: #bebebe; }
+      color: white;
+      background: #1a1b35; }
   .btn-light:hover {
-    color: #111;
-    background: #bebebe; }
+    color: white;
+    background: #1a1b35; }
   .btn-light:focus {
     color: #111; }
 
@@ -2672,7 +2672,7 @@ fieldset[disabled] .form-control {
 	7.0 Footers
 -------------------------------------------------- */
 .copyright {
-  background: #222;
+  background: white;
   padding-top: 20px;
   padding-bottom: 20px; }
   .copyright small {
@@ -2719,7 +2719,7 @@ fieldset[disabled] .form-control {
 
 /* ---- 7.1 Footer Widgets ---- */
 .footer-widgets {
-  background: #111; }
+  background: #1a1b35; }
   .footer-widgets .widget .header-widget {
     padding-bottom: 17px;
     margin-bottom: 25px;
@@ -2738,13 +2738,15 @@ fieldset[disabled] .form-control {
       padding-right: 15px;
       font-size: 22px; }
       .footer-widgets .about-widget .social-links li a {
-        color: #777; }
+        color: white; }
         .footer-widgets .about-widget .social-links li a:hover {
           color: #ececec; }
   .footer-widgets .about-widget a {
-    color: #777; }
+    color: white; }
     .footer-widgets .about-widget a:hover {
       color: #f8f8f8; }
+  .footer-widgets .about-widget p {
+    color: white; }
   .footer-widgets .gallery-widget ul {
     list-style: none;
     padding: 0;
@@ -3281,8 +3283,8 @@ fieldset[disabled] .form-control {
 
 /* ---- Navbar Inverse (Dark) ---- */
 .navbar-inverse {
-  border-bottom: 1px solid #222;
-  background: #111; }
+  border-bottom: 1px solid #1a1b35;
+  background: #1a1b35; }
   .navbar-inverse .navbar-nav li a {
     color: white; }
     .navbar-inverse .navbar-nav li a:hover {
@@ -4838,7 +4840,9 @@ fieldset[disabled] .form-control {
   .team-3col .t-item .t-image, .team-4col .t-item .t-image, .freelancer-about .t-item .t-image {
     position: relative;
     height: 375px;
-    overflow: hidden; }
+    overflow: hidden;
+    padding: 50px;
+    background-color: #cccccc; }
     .team-3col .t-item .t-image .t-description, .team-4col .t-item .t-image .t-description, .freelancer-about .t-item .t-image .t-description {
       display: block;
       position: absolute;
@@ -8756,6 +8760,15 @@ form .input-error-2 {
       font-weight: 600;
       letter-spacing: 0.8px;
       background: #D9534F;
+      z-index: 101; }
+    .shop-product-card .product-image-wrapper .location-label {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      background: #0BBE30;
       z-index: 101; }
     .shop-product-card .product-image-wrapper .buy-btn {
       display: inline-block;

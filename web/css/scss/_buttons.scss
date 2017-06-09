@@ -9,8 +9,8 @@
 	position: relative;
 	display: inline-block;
 	padding: $btn-padding;
-	background: $dark;
-	color: $light;
+	background: rgb(26, 27, 53);
+	color: white;
 	font-family: $btn-font;
 	text-transform: uppercase;
 	letter-spacing: $btn-letter-spaceing;
@@ -20,18 +20,18 @@
 	transition: all $btn-trans-time;
 
 	&:visited {
-		color: $light;
-		background: $dark;
+		color: white;
+		background: rgb(26, 27, 53);
 
 		&:hover {
-			color: $light;
-			background: lighten($dark, 18%);
+			color: rgb(26, 27, 53);
+			background: white;
 		}
 	}
 
 	&:hover {
-		color: $light;
-		background: lighten($dark, 18%);
+		color: rgb(26, 27, 53);
+		background: white;
 	}
 
 	&:focus {
@@ -157,21 +157,21 @@ input[class="btn-ghost"] {
 	@extend .btn;
 
 	color: $dark;
-	background: $light;
+	background: white;
 
 	&:visited {
 		color: $dark;
-		background: $light;
+		background: white;
 
 		&:hover {
-			color: $dark;
-			background: darken($light, 18%);
+			color: white;
+			background: rgb(26, 27, 53);
 		}
 	}
 
 	&:hover {
-		color: $dark;
-		background: darken($light, 18%);
+		color: white;
+		background: rgb(26, 27, 53);
 	}
 
 	&:focus {
