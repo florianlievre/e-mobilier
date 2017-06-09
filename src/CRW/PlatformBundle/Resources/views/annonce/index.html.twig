@@ -4,66 +4,57 @@
 
 {% block body %}
 
+    {% block nav %}
 
+      {{ parent() }}
+      
+    {% endblock %}
 
+    <section id="blog" class="section container blog-columns blog-preview">
+        <a href="{{ path('annonce_new') }}" class="btn btn-small">Ajouter une annonce</a><br><br>
+        <div class="row">
 
-                <section id="blog" class="section container blog-columns blog-preview">
-                    <a href="{{ path('annonce_new') }}" class="btn btn-small">Ajouter une annonce</a><br><br>
-                    <div class="row">
+            {% for annonce in annonces %}
 
-                        {% for annonce in annonces %}
+                    <!-- Blog Post 1 -->
+                    <div class="col-lg-4 col-md-6 mb-sm-50 ws-s">
+                        <div class="blog-post">
 
+                            <!-- Image -->
+                            <a href="#" class="post-img"><img src="http://placehold.it/990x715" alt="Blog Post 1"></a>
 
+                            <div class="bp-content">
 
-                                <!-- Blog Post 1 -->
-                                <div class="col-lg-4 col-md-6 mb-sm-50 ws-s">
-                                    <div class="blog-post">
+                                <!-- Meta data -->
+                                <div class="post-meta">
+                                    <a href="#" class="post-date">
+                                        <i class="fa fa-calendar-o"></i>
+                                        <span>{% if annonce.dateCreation %}{{ annonce.dateCreation|date('Y-m-d') }}{% endif %}</span>
+                                    </a>
+                                    <a href="#" class="post-comments">
+                                        <i class="fa fa-comments-o"></i>
+                                        <span>12</span>
+                                    </a>
+                                </div><!-- / .meta -->
 
-                                        <!-- Image -->
-                                        <a href="#" class="post-img"><img src="http://placehold.it/990x715" alt="Blog Post 1"></a>
+                                <!-- Post Title -->
+                                <a href="blog-post.html" class="post-title"><h4>{{ annonce.titre }}</h4></a>
 
-                                        <div class="bp-content">
+                                <!-- Blurb -->
+                                <p>{{ annonce.description|slice(0,75) }}</p>
 
-                                            <!-- Meta data -->
-                                            <div class="post-meta">
-                                                <a href="#" class="post-date">
-                                                    <i class="fa fa-calendar-o"></i>
-                                                    <span>{% if annonce.dateCreation %}{{ annonce.dateCreation|date('Y-m-d') }}{% endif %}</span>
-                                                </a>
-                                                <a href="#" class="post-comments">
-                                                    <i class="fa fa-comments-o"></i>
-                                                    <span>12</span>
-                                                </a>
-                                            </div><!-- / .meta -->
+                                <!-- Link -->
 
-                                            <!-- Post Title -->
-                                            <a href="blog-post.html" class="post-title"><h4>{{ annonce.titre }}</h4></a>
+                                <center><a href="{{ path('annonce_show', { 'id': annonce.id }) }}" class="btn btn-small">Afficher</a></br></br>
+                                    <a href="{{ path('annonce_edit', { 'id': annonce.id }) }}" class="btn btn-small">Modifier</a></center>
 
-                                            <!-- Blurb -->
-                                            <p>{{ annonce.description|slice(0,75) }}</p>
+                            </div><!-- / .bp-content -->
 
-                                            <!-- Link -->
+                        </div><!-- / .blog-post -->
+                    </div><!-- / .col-lg-4 -->
 
-                                            <center><a href="{{ path('annonce_show', { 'id': annonce.id }) }}" class="btn btn-small">Afficher</a></br></br>
-                                                <a href="{{ path('annonce_edit', { 'id': annonce.id }) }}" class="btn btn-small">Modifier</a></center>
+            {% endfor %}
 
-                                        </div><!-- / .bp-content -->
-
-                                    </div><!-- / .blog-post -->
-                                </div><!-- / .col-lg-4 -->
-
-
-                        {% endfor %}
-
-                </section>
-
-
-
-
-
-
-
-
-
+    </section>
 
 {% endblock %}

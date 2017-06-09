@@ -2,9 +2,13 @@
 
 {% set active = 0 %}
 
-
 {% block body %}
 
+    {% block nav %}
+
+      {{ parent() }}
+      
+    {% endblock %}
 
 <header class="page-title pt-small">
     <div class="container">
@@ -19,14 +23,11 @@
     </div>
 </header>
 
-
-
 <!-- ========== Forms ========== -->
 
 <section class="test">
     {{ form_start(form) }}
         <div class="row ws-m ">
-
 
             <div class="col-md-offset-2 col-md-4">
                 <br>
@@ -91,10 +92,7 @@
     {{ form_end(form) }}
 </section><!-- / .container -->
 
-
-
     {{ form_widget(form.envoyer) }}
-
 
 <ul>
     <li>
