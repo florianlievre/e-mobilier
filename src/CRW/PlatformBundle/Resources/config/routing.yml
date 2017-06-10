@@ -14,10 +14,6 @@ crw_platform_faq:
     path:     /FAQ 
     defaults: { _controller: CRWPlatformBundle:Faq:index }
 
-crw_platform_about: 
-    path:     /apropos 
-    defaults: { _controller: CRWPlatformBundle:About:index }
-
 crw_platform_legal: 
     path:     /mentions-legales 
     defaults: { _controller: CRWPlatformBundle:Legal:index }
