@@ -169,7 +169,7 @@
 
         {% endblock %}
 
-        {% block javascripts %}
+        
             <!-- JS -->
             <link rel="stylesheet" href="{{ asset('js/vendor/modernizr-2.8.3.min.js') }}" >
 
@@ -186,7 +186,7 @@
             <script src="{{ asset('js/vendor/jquery.scrollTo.min.js') }}"></script>
             <script src="{{ asset('js/vendor/jquery.stellar.min.js') }}"></script>
             <script src="{{ asset('js/vendor/jquery.parallax.js') }}"></script>
-            <script src="{{ asset('js/vendor/jquery.cookie.js') }}"></script>
+            <script src="{{ asset('js/vendor/js.cookie.js') }}"></script>
             <script src="{{ asset('js/vendor/slick.min.js') }}"></script>
             <script src="{{ asset('js/vendor/jquery.easypiechart.min.js') }}"></script>
             <script src="{{ asset('js/vendor/countup.min.js') }}"></script>
@@ -204,22 +204,37 @@
             <script src="{{ asset('js/main.js') }}"></script>
 
             <script>
-            console.log($.cookie('cookies_accepted'));
+   
+            console.log("test " + JSON.stringify(Cookies()));
+
                 /* On vérifie si l'émément existe */
                 if ($("#cookies-banner").length > 0) {
+
+                    console.log("ok 1 " );
+
                     $("#cookies-banner").find('a').on('click', function(e) {
+
+                        console.log("ok 2 " );
                         e.preventDefault();
+
                         $("#cookies-banner").slideUp();
-                        $.cookie('cookies_accepted', '1', { 
+
+                        Cookies.set('test', '1', { 
                             expires: 365,
-                            secure: true,
+                            secure: false,
                         });
+
+                        console.log("test " + JSON.stringify(Cookies()));
                     });
-                    if ($.cookie('cookies_accepted') != 1){
+                    if (Cookies.get('test') != 1){
+
                         $("#cookies-banner").show();
+
                     }
                 }
+
             </script>
+        {% block javascripts %}
         {% endblock %}
     </body>
 </html>

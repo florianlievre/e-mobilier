@@ -15,7 +15,6 @@ class ContactController extends Controller
         // Create the form according to the FormType created previously.
         // And give the proper parameters
         $form = $this->createForm('CRW\PlatformBundle\Form\ContactType',null,array(
-            // To set the action use $this->generateUrl('route_identifier')
             'action' => $this->generateUrl('crw_platform_contact_envoyer'),
             'method' => 'POST'
         ));
@@ -32,7 +31,6 @@ class ContactController extends Controller
         // Create the form according to the FormType created previously.
         // And give the proper parameters
         $form = $this->createForm('CRW\PlatformBundle\Form\ContactType',null,array(
-            // To set the action use $this->generateUrl('route_identifier')
             'action' => $this->generateUrl('crw_platform_contact_envoyer'),
             'method' => 'POST'
         ));
@@ -52,7 +50,6 @@ class ContactController extends Controller
 
                 // Envoi de mail
                 if($this->sendEmail($form->getData())){
-
                     // Tout est OK, redirection possible:
                     // return $this->redirectToRoute('redirect_to_somewhere_now');
                 }
