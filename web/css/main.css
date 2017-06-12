@@ -6867,6 +6867,11 @@ form .input-error-2 {
       .contact-3 .form-wrapper .form-minimal .input-error-2:focus {
         border-color: #e80000; }
 
+#contact {
+  padding-bottom: 0; }
+  #contact > .footer-litle {
+    padding-bottom: 0; }
+
 /* --------------------------------------------------
 	21.0 Login/Signup - Pages
 -------------------------------------------------- */

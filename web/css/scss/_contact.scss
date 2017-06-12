@@ -313,3 +313,12 @@ form {
 		}
 	}
 } // .contact-3
+
+
+#contact {
+	padding-bottom:0;
+
+	& > .footer-litle {
+		padding-bottom:0;
+	}
+}
