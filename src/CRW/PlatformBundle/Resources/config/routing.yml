@@ -22,6 +22,10 @@ crw_platform_cgv:
     path:     /CGV
     defaults: { _controller: CRWPlatformBundle:Cgv:index }
 
+crw_platform_cgu: 
+    path:     /CGU
+    defaults: { _controller: CRWPlatformBundle:Cgu:index }
+
 #crw_platform_login: 
 #    path:     /login
 #    defaults: { _controller: CRWPlatformBundle:Login:index }
