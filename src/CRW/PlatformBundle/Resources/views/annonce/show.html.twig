@@ -10,6 +10,7 @@
     
     <h1>Annonce</h1>
 
+
     <div id="blog" class="section container blog-classic">
         <div class="row">
             <div class="col-md-8 mb-sm-160">
@@ -34,13 +35,12 @@
 
                     <!-- Title -->
                     <h2 class="post-title">{{ annonce.titre }}</h2>
+                    <h2 class="post-title fa fa-location-arrow">  {{ annonce.adresse }} |  {{ annonce.arrondissement }} arrondissement </h2>
 
 
                     <div class="blog-post-content">
-                        <br>
-                        <!-- List -->
 
-                        <br>
+
                         <p>
                             {{ annonce.description }}
                         </p>
@@ -163,7 +163,7 @@
 
                 <!-- Tags - Widget -->
                 <div class="col-md-12 ws-s tags-widget">
-                    <h5 class="header-widget">Tags</h5>
+                    <h5 class="header-widget">Informations</h5>
                     <ul class="flat-list">
                         <li><i class="fa fa-check">Type :<b>
                                     {% if annonce.typedebien == 0%}
@@ -175,11 +175,10 @@
 
 
                                 </b></i></li>
-                        <li><i class="fa fa-check">{{ annonce.prix }}€</i></li>
-                        <li><i class="fa fa-check">Surface habitable :{{ annonce.surface }} m²</i></li>
-                        <li><i class="fa fa-check">Pièces :{{ annonce.nbdepiece }}</i></li>
-                        <li><i class="fa fa-check">{{ annonce.prix }}</i></li>
-                        <li><i class="fa fa-check">Classement Energétique :{{ annonce.dpe }}</i></li>
+                        <li><i class="fa fa-check">Prix :<b>{{ annonce.prix }}€</b></i></li>
+                        <li><i class="fa fa-check">Surface habitable :<b>{{ annonce.surface }} m²</b></i></li>
+                        <li><i class="fa fa-check">Pièces :<b>{{ annonce.nbdepiece }}</b></i></li>
+                        <li><i class="fa fa-check">Classement Energétique :<b>{{ annonce.dpe }}</b></i></li>
                     </ul>
                 </div>
 

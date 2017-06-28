@@ -12,11 +12,7 @@
     <div class="container">
         <div class="row">
             <h1 class="col-sm-6">Formulaire d'annonce</h1>
-            <ol class="col-sm-6 text-right breadcrumb">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Elements</a></li>
-                <li class="active">Buttons</li>
-            </ol>
+
         </div>
     </div>
 </header>
@@ -34,6 +30,14 @@
                 <div class="form-group">
                     {{ form_label(form.titre) }}
                     {{ form_widget(form.titre, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.adresse) }}
+                    {{ form_widget(form.adresse, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.arrondissement) }}
+                    {{ form_widget(form.arrondissement, { 'attr': {'class': 'form-control'} }) }}
                 </div>
                 <div class="form-group">
                     {{ form_label(form.typedebien) }}
