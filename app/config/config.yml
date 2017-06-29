@@ -62,6 +62,7 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
 
+
 # Swiftmailer Configuration
 swiftmailer:
     transport:    gmail
@@ -95,3 +96,11 @@ knp_paginator:
     template:
         pagination: 'KnpPaginatorBundle:Pagination:foundation_v5_pagination.html.twig'     # sliding pagination controls template
         sortable: 'KnpPaginatorBundle:Pagination:sortable_link.html.twig' # sort link template
+
+vich_uploader:
+    db_driver: orm
+    mappings:
+        media:
+            uri_prefix: /media/
+            upload_destination: '%kernel.root_dir%/../web/uploads/'
+            namer: vich_uploader.namer_uniqid

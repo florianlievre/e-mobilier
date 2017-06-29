@@ -3,6 +3,8 @@
 namespace CRW\PlatformBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 
 /**
@@ -10,6 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table(name="annonce")
  * @ORM\Entity(repositoryClass="CRW\PlatformBundle\Repository\AnnonceRepository")
+ * @Vich\Uploadable
  */
 class Annonce
 {
@@ -97,12 +100,7 @@ class Annonce
      */
     private $ges;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="image", type="string", length=255)
-     */
-    private $image;
+
 
 
     /**
@@ -111,6 +109,34 @@ class Annonce
      * @ORM\ManyToOne(targetEntity="CRW\PlatformBundle\Entity\Utilisateur", inversedBy="annonces")
      */
     private $auteur;
+
+
+    /**
+     * @Vich\UploadableField(mapping="media", fileNameProperty="mediaName")
+     *
+     * @var Media
+     */
+    private $mediaFile;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     *
+     * @var string
+     */
+    private $mediaName;
+
+    /**
+     * @ORM\Column(type="datetime")
+     *
+     * @var \DateTime
+     */
+    private $updatedAt;
+
+
+
+
+
+
 
 
     /**
@@ -367,29 +393,6 @@ class Annonce
         return $this->ges;
     }
 
-    /**
-     * Set image
-     *
-     * @param string $image
-     *
-     * @return Annonce
-     */
-    public function setImage($image)
-    {
-        $this->image = $image;
-
-        return $this;
-    }
-
-    /**
-     * Get image
-     *
-     * @return string
-     */
-    public function getImage()
-    {
-        return $this->image;
-    }
 
     /**
      * Set filename
@@ -413,5 +416,49 @@ class Annonce
     public function getFilename()
     {
         return $this->filename;
+    }
+
+
+    /**
+     * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile $annonce
+     *
+     * @return Annonce
+     */
+    public function setMediaFile(File $annonce = null)
+    {
+        $this->mediaFile = $annonce;
+
+        if ($annonce)
+            $this->updatedAt = new \DateTimeImmutable();
+
+        return $this;
+    }
+
+    /**
+     * @return File|null
+     */
+    public function getMediaFile()
+    {
+        return $this->mediaFile;
+    }
+
+    /**
+     * @param string $mediaName
+     *
+     * @return Annonce
+     */
+    public function setMediaName($mediaName)
+    {
+        $this->mediaName = $mediaName;
+
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getMediaName()
+    {
+        return $this->mediaName;
     }
 }
