@@ -12,11 +12,7 @@
     <div class="container">
         <div class="row">
             <h1 class="col-sm-6">Formulaire d'annonce</h1>
-            <ol class="col-sm-6 text-right breadcrumb">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Elements</a></li>
-                <li class="active">Buttons</li>
-            </ol>
+
         </div>
     </div>
 </header>
@@ -24,8 +20,11 @@
 <!-- ========== Forms ========== -->
 
 <section class="test">
-    {{ form_start(form) }}
-        <div class="row ws-m ">
+
+    {{ form_start(form) }}<br><br>
+    <a href="{{ path('annonce_index') }}"class="btn">Retour à mes annonces</a>
+
+    <div class="row ws-m ">
 
             <div class="col-md-offset-2 col-md-4">
                 <br>
@@ -92,11 +91,7 @@
 
     {{ form_widget(form.envoyer) }}
 
-<ul>
-    <li>
-        <a href="{{ path('annonce_index') }}">Back to the list</a>
-    </li>
-</ul>
+
 
 {% endblock %}
 

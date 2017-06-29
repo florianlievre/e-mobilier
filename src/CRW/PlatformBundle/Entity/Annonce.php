@@ -43,6 +43,12 @@ class Annonce
      */
     private $description;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="filename", type="string", nullable=true)
+     */
+    private $filename;
 
     /**
      * @var boolean
@@ -383,5 +389,29 @@ class Annonce
     public function getImage()
     {
         return $this->image;
+    }
+
+    /**
+     * Set filename
+     *
+     * @param string $filename
+     *
+     * @return Annonce
+     */
+    public function setFilename($filename)
+    {
+        $this->filename = $filename;
+
+        return $this;
+    }
+
+    /**
+     * Get filename
+     *
+     * @return string
+     */
+    public function getFilename()
+    {
+        return $this->filename;
     }
 }
