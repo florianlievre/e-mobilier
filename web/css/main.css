@@ -2370,6 +2370,72 @@ fieldset[disabled] .form-control {
   letter-spacing: 2px;
   color: #111; }
 
+#appbundle_annonce > div {
+  margin: 20px 0; }
+  #appbundle_annonce > div:focus, #appbundle_annonce > div:hover {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: #777; }
+  #appbundle_annonce > div input, #appbundle_annonce > div select, #appbundle_annonce > div textarea {
+    height: 40px;
+    padding-left: 20px;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    line-height: 22px;
+    letter-spacing: .5px;
+    -webkit-transition: border-color .5s;
+    -o-transition: border-color .5s;
+    transition: border-color .5s;
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    color: #555;
+    background-color: #fff;
+    background-image: none; }
+  #appbundle_annonce > div input[type="file"] {
+    background: #f9f9f9; }
+    #appbundle_annonce > div input[type="file"]:focus, #appbundle_annonce > div input[type="file"]:hover {
+      outline: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border-color: #ddd !important; }
+  #appbundle_annonce > div label {
+    font-size: .8em;
+    font-family: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #111; }
+  #appbundle_annonce > div button {
+    position: relative;
+    display: inline-block;
+    padding: 8px 38px;
+    background: #1a1b35;
+    color: white;
+    font-family: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-size: 0.9em;
+    line-height: 1.8em;
+    border-radius: 0;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 1px solid transparent;
+    white-space: nowrap; }
+    #appbundle_annonce > div button:hover {
+      color: #1a1b35;
+      background: white;
+      text-decoration: none; }
+
 /* --------------------------------------------------
 	X.0 Progress Bars
 -------------------------------------------------- */

@@ -8,30 +8,26 @@
       
     {% endblock %}
 
-    <h1 xmlns="http://www.w3.org/1999/html">Annonce</h1>
+    <header class="page-title pt-large pt-dark pt-plax-lg-dark">
+        <div class="container">
+
+        </div>
+
+    </header>
 
 
     <div id="blog" class="section container blog-classic">
         <div class="row">
+            <h1 xmlns="http://www.w3.org/1999/html" style="text-align:center;">Annonce</h1>
+
             <div class="col-md-8 mb-sm-160">
 
                 <!-- Blog Post -->
                 <div class="col-md-12 blog-post-single wow fadeIn" data-wow-delay=".1s" data-wow-duration="2s">
 
                     <!-- Image -->
-                    <center><img class="img-responsive post-img" style="width:400px" src="/e-mobilier/web/uploads/{{ annonce.mediaName }}" alt="Blog Post 1">
+                    <center><img class="img-responsive post-img" style="width:400px" src="/web/uploads/{{ annonce.mediaName }}" alt="Blog Post 1">
                         </center>
-                    <!-- Meta data -->
-                    <div class="post-meta">
-                        <a href="#" class="post-date">
-                            <i class="fa fa-calendar-o"></i>
-                            <span>August 01.2015</span>
-                        </a>
-                        <a href="#" class="post-comments">
-                            <i class="fa fa-comments-o"></i>
-                            <span>4</span>
-                        </a>
-                    </div><!-- / .meta -->
 
                     <!-- Title -->
                     <h2 class="post-title">{{ annonce.titre }}</h2>

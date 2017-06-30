@@ -54,3 +54,84 @@ fieldset[disabled] .form-control {
 		color: $dark;
 	}
 } // .form-group
+
+
+#appbundle_annonce {
+	& > div {
+
+		margin:20px 0;
+
+		&:focus,
+		&:hover {
+			outline: none;
+			box-shadow: none;
+			border-color: $input-border-color-focused;
+		}
+
+		input, select, textarea {
+			height: $input-height;
+			padding-left: 20px;
+			border-radius: 0;
+			box-shadow: none;
+			line-height: 22px;
+			letter-spacing: .5px;
+			transition: border-color .5s;
+			display: block;
+			width: 100%;
+			font-size: 14px;
+			color: #555;
+			background-color: #fff;
+			background-image: none;
+		}
+
+		input[type="file"] {
+			background: #f9f9f9;
+
+			&:focus,
+			&:hover {
+				outline: none;
+				box-shadow: none;
+				border-color: $input-border-color !important;
+			}
+		}
+
+		label {
+			font-size: .8em;
+			font-family: $heading-font;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			color: $dark;
+		}
+
+		button {
+			position: relative;
+			display: inline-block;
+			padding: 8px 38px;
+			background: #1a1b35;
+			color: white;
+			font-family: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+			text-transform: uppercase;
+			letter-spacing: 2.5px;
+			font-size: 0.9em;
+			line-height: 1.8em;
+			border-radius: 0;
+			-webkit-transition: all 0.5s;
+			-o-transition: all 0.5s;
+			transition: all 0.5s;
+			margin-bottom: 0;
+			font-weight: normal;
+			text-align: center;
+			vertical-align: middle;
+			touch-action: manipulation;
+			cursor: pointer;
+			border: 1px solid transparent;
+			white-space: nowrap;
+
+			&:hover {
+				color: #1a1b35;
+				background: white;
+				text-decoration: none;
+			}
+		}
+	}
+}

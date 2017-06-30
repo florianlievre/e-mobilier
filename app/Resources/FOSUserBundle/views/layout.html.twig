@@ -1,18 +1,50 @@
 {% extends 'base.html.twig' %}
 
+{% block nav %}
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse is-home navbar-fw" role="navigation">
+        <div class="navbar-header page-scroll">
+            <!-- Logo -->
+            <a class="navbar-brand" href="{{ path('crw_platform_homepage') }}"><img src="{{ asset('img/logo.svg') }}"></a>
+        </div>
+
+        <!-- Navbar Links -->
+        <div id="navbar" class="navbar-collapse collapse page-scroll navbar-right">
+            <ul class="nav navbar-nav">
+                <li><a href="{{ path('crw_platform_homepage') }}">Accueil<span class="sr-only"></span></a></li>
+                <li><a href="{{ path('listedesbiens') }}">Trouver un bien<span class="sr-only"></span></a></li>
+                <li><a href="{{ path('crw_platform_annonce') }}">Annonces<span class="sr-only"></span></a></li>
+                <li><a href="{{ path('crw_platform_faq') }}">FAQ<span class="sr-only"></span></a></li>
+                <li><a href="{{ path('crw_platform_contact_index') }}">Contact<span class="sr-only"></span></a></li>
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                <li>
+                    <a href="{{ path('fos_user_security_logout') }}">
+                        {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                    </a>
+                </li>
+                {% else %}
+                    <li><a href="{{ path('crw_platform_annonce') }}">Connexion<span class="sr-only"></span></a></li>
+                {% endif %}
+            </ul><!-- / .nav .navbar-nav -->
+        </div><!--/.navbar-collapse -->
+    </nav><!-- / .navbar -->
+
+    <header class="page-title pt-large pt-dark pt-plax-lg-dark">
+        <div class="container">
+
+        </div>
+
+    </header>
+
+{% endblock %}
+
+{% block header %}
+
+
+{% endblock %}
+
     
 {% block body %}
-
-    <div>
-        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-            {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
-            <a href="{{ path('fos_user_security_logout') }}">
-                {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
-            </a>
-        {% else %}
-            <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
-        {% endif %}
-    </div>
 
     {% if app.request.hasPreviousSession %}
         {% for type, messages in app.session.flashbag.all() %}
