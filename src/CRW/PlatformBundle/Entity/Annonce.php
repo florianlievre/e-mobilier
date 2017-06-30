@@ -3,6 +3,8 @@
 namespace CRW\PlatformBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 
 /**
@@ -10,6 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table(name="annonce")
  * @ORM\Entity(repositoryClass="CRW\PlatformBundle\Repository\AnnonceRepository")
+ * @Vich\Uploadable
  */
 class Annonce
 {
@@ -43,6 +46,12 @@ class Annonce
      */
     private $description;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="filename", type="string", nullable=true)
+     */
+    private $filename;
 
     /**
      * @var boolean
@@ -91,12 +100,15 @@ class Annonce
      */
     private $ges;
 
+
+
+
     /**
-     * @var string
      *
-     * @ORM\Column(name="image", type="string", length=255)
+     *
+     * @ORM\ManyToOne(targetEntity="CRW\PlatformBundle\Entity\Utilisateur", inversedBy="annonces")
      */
-    private $image;
+    private $auteur;
 
     /**
      * @var text
@@ -115,11 +127,31 @@ class Annonce
 
 
     /**
+     * @Vich\UploadableField(mapping="media", fileNameProperty="mediaName")
      *
-     *
-     * @ORM\ManyToOne(targetEntity="CRW\PlatformBundle\Entity\Utilisateur", inversedBy="annonces")
+     * @var Media
      */
-    private $auteur;
+    private $mediaFile;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     *
+     * @var string
+     */
+    private $mediaName;
+
+    /**
+     * @ORM\Column(type="datetime")
+     *
+     * @var \DateTime
+     */
+    private $updatedAt;
+
+
+
+
+
+
 
 
     /**
@@ -376,28 +408,73 @@ class Annonce
         return $this->ges;
     }
 
+
     /**
-     * Set image
+     * Set filename
      *
-     * @param string $image
+     * @param string $filename
      *
      * @return Annonce
      */
-    public function setImage($image)
+    public function setFilename($filename)
     {
-        $this->image = $image;
+        $this->filename = $filename;
 
         return $this;
     }
 
     /**
-     * Get image
+     * Get filename
      *
      * @return string
      */
-    public function getImage()
+    public function getFilename()
     {
-        return $this->image;
+        return $this->filename;
+    }
+
+
+    /**
+     * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile $annonce
+     *
+     * @return Annonce
+     */
+    public function setMediaFile(File $annonce = null)
+    {
+        $this->mediaFile = $annonce;
+
+        if ($annonce)
+            $this->updatedAt = new \DateTimeImmutable();
+
+        return $this;
+    }
+
+    /**
+     * @return File|null
+     */
+    public function getMediaFile()
+    {
+        return $this->mediaFile;
+    }
+
+    /**
+     * @param string $mediaName
+     *
+     * @return Annonce
+     */
+    public function setMediaName($mediaName)
+    {
+        $this->mediaName = $mediaName;
+
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getMediaName()
+    {
+        return $this->mediaName;
     }
 
     /**

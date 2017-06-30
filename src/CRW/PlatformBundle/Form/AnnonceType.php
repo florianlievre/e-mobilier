@@ -100,11 +100,7 @@ class AnnonceType extends AbstractType
                 )
             ))
 
-
-
-            ->add('image', TextType::class, array(
-                'label' => "image",
-            ))
+            ->add('mediaFile', 'Vich\UploaderBundle\Form\Type\VichFileType')
 
             ->add('envoyer', SubmitType::class, array(
                 'attr' => array('class' => 'save'),
